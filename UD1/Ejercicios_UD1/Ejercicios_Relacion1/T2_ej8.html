@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Javier Muñoz Parra">
+    <title>T2_ej8</title>
+</head>
+<body>
+    <script>
+        //Guardo el apellido y nombre a deducir en la variable Apellidopresi y nombrePresi
+        let apellidoPresi = "Suarez"
+        let nombrePresi = "Adolfo"
+
+        
+        //Aqui recojo la respuesta del usuario y compruebo el nombre y apellido sean los mismos que en 
+        // "aprellidoPresi y nombrePresi"
+        let uPresi = prompt("¿Cuál fue el primer presidente de la democracia española?")
+        let nomb = uPresi.includes(nombrePresi)
+        let ape = uPresi.includes(apellidoPresi)
+
+        //Con este bucle compruebo que si la respuesta del usuario ES diferente a la RESPUESTA correcta,
+        //de un mensaje de error y vuelva a pedir el apellido para pasar el control parental
+        do {
+            //Aqui los vuelvo a comprobar en caso de que el usuario falle al introducir el nombre del presidente
+            nomb = uPresi.includes(nombrePresi)
+            ape = uPresi.includes(apellidoPresi)
+
+            //si el apellido es false, se lo hace saber al usuario y le vuelve a pedir el nombre y apellido del presidente
+            if (!ape){
+                alert("Te falta el apellido. ¿Cuál fue el primer presidente de la democracia española?")
+                uPresi = prompt("¿Cuál fue el primer presidente de la democracia española?")
+            } else if (!nomb) {
+                //Si el nombre del usuario es incorrecto, lo mismo de antes, 
+                // lo hace saber y le pide al usuario el nombre y apellido del presidente
+                alert("Te falta el nombre, ¿Cuál fue el primer presidente de la democracia española?")
+                uPresi = prompt("¿Cuál fue el primer presidente de la democracia española?")
+            } 
+            //esta condicion comprueba que si el nombre del presidente es falso siga en el while, lo mismo con el apellido
+            // y con ambas, es decir, que hasta que no acierte ambos se queda en el bucle hasta acertar, una vez sale, se cierra
+            // la alerta y muestra en el documento HTML un mensaje de felicitacion
+        } while (nomb == false || ape == false || nomb == false && ape == false);
+
+        document.write(`<p> Bienvenido al sistema, Enhorabuena por acertar al Presidente ;)`)
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Javier Muñoz Parra">
+    <title>T2_ej3</title>
+</head>
+<body>
+    <script>
+        //Uso estas variables, edad para guardar la edad del usuario, y tipo servira para luego mostrar en pantalla el mensaje del usuario
+        //segun su edad
+        let edad = parseInt(prompt("Introduzca su edad"));
+        let tipo;
+
+        //aqui hago las diferentes comprobaciones para dar un mensaje por pantalla del tipo de rango del usuario
+        if (edad > 18) {
+            tipo = "Absoluto";
+        } else if (edad < 18 && edad >=16 ) {
+            tipo = "Juvenil";
+        } else if (edad >= 14 && edad <=15) {
+            tipo = "Cadete";
+        } else if (edad >= 12 && edad <=13){
+            tipo = "Infantil";
+        } else if (edad >= 10 && edad <= 11){
+            tipo = "Alevín";
+        } else if (edad >= 8 && edad <= 9){
+            tipo = "Benjamín";
+        } else if (edad < 8) {
+            tipo = "Su edad es menor de la requerida para obtener un rango";
+        } else {
+            tipo = "hubo un error en la web."
+        }
+
+        //esta linea imprime en la web el rango del usuario
+        document.write(tipo)
+    </script>
+</body>
+</html>

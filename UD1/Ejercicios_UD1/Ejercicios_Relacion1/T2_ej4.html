@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Javier Muñoz Parra" />
+    <title>T2_ej4</title>
+  </head>
+  <body>
+    <script>
+        let hora = 0;
+        let enPunto = false;
+        
+        for (hora = 9; hora <= 21; hora++) { //con este for, recorro las horas y cada 30 mins añado 1h, despues imprimo cada en punto TRUE y en cada y media FALSE
+            enPunto = true
+            document.write(`<p>${hora}:00 ${enPunto}</p>`)
+            
+            enPunto = false
+            document.write(`<p>${hora}:30 ${enPunto}</p>`)
+        }
+    </script>
+  </body>
+</html>

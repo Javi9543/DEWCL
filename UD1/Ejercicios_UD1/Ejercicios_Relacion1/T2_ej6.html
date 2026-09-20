@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Javier Muñoz Parra" />
+    <title>T2_ej6</title>
+  </head>
+  <body>
+    <script>
+     //creo esta variable con parse int para que el numero introducido sea entero
+      var countdown = parseInt(prompt("Introduce un número para iniciar la cuenta atrás"));
+     
+      //este for va restando desde el numero x introducido por el usuario hasta 0, una vez ha llegado al final 
+      //el alert se cierra.
+      for (countdown; countdown >= 0; countdown--) {
+        alert(countdown + "...");
+      }
+    </script>
+  </body>
+</html>

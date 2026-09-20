@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Javier Muñoz Parra">
+    <title>T2_ej7</title>
+</head>
+<body>
+    <script>
+        //Guardo el apellido a deducir en la variable presi
+        let presi = "Suarez"
+
+        //Aqui recojo la respuesta del usuario
+        let uPresi = prompt("Introduzca el apellido del PRIMER presidente de la democracia española para pasar el control parental")
+
+        //Con este bucle compruebo que si la respuesta del usuario ES diferente a la RESPUESTA correcta,
+        //de un mensaje de error y vuelva a pedir el apellido para pasar el control parental
+        while (uPresi != presi){
+            alert("Respuesta incorrecta, intentelo de nuevo");
+            uPresi = prompt("Introduzca el apellido del PRIMER presidente de la democracia española para pasar el control parental")
+        }
+        
+        //Aqui compruebo que si es igual lo que introduce el usuario con la respuesta correcta,
+        //felicite al usuario (en caso de que no lo fuera no hubiera pasado del bucle)
+        if(uPresi == presi){
+            document.write(`<p> Bienvenido al sistema, Enhorabuena por acertar el apellido ;)`)
+        }
+    </script>
+</body>
+</html>
