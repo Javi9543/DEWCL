@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio3</title>
+</head>
+<body>
+
+    </table>
+    <script>
+        //Pido los datos al usuario
+        let numeroColumnas = parseInt(prompt("Introduzca el numero de columnas:"));      
+        let altura = parseInt(prompt("Introduzca la altura en pixeles: "));
+        let anchura = parseInt(prompt("Introduzca la anchura en pixeles: "));
+
+        //empiezo a generar la tabla con la altura solicitada por el usuario
+        document.write(`<table border = "0" cellspacing="2" bgcolor="black" width="200">`);
+        document.write(`<tr bgcolor="white" height="${altura}>"`);
+        
+        //En este bucle, si el numero es par (a eso de la operacion index %2 == 0), se pinta le fondo de negro, si es impar
+        //el fondo se pinta de blanco
+        for (let index = 0; index < numeroColumnas + 1; index++) {
+            if (index % 2 == 0){
+                document.write(`<td width="${anchura}" bgcolor="black">&nbsp;</td>`);
+            } else {
+                document.write(`<td width="${anchura}" bgcolor="white">&nbsp;</td>`);
+            }
+                
+        }
+
+        //Aqui cierro la tabla
+        document.write(`</tr>`);
+        document.write(`</table>`);
+    </script>
+</body>
+</html>
