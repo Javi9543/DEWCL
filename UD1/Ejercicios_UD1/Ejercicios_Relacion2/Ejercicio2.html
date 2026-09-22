@@ -9,17 +9,21 @@
 
     </table>
     <script>
+        //Pido los datos al usuario
         let numeroColumnas = parseInt(prompt("Introduzca el numero de columnas:"))
         let altura = parseInt(prompt("Introduzca la altura en pixeles: "))
         let anchura = parseInt(prompt("Introduzca la anchura en pixeles: "))
 
+        //el programa empieza a pintar la tabla con la altura solicitada por el usuario 
         document.write(`<table border = "0" cellspacing="2" bgcolor="black" width="200">`)
         document.write(`<tr bgcolor="white" height="${altura}"`)
-
+        
+        //este bucle pinta las columnas solicitadas por el usuario
         for (let index = 0; index < numeroColumnas + 1; index++) {
             document.write(`<td width="${anchura}">&nbsp;</td>`)
         }
 
+        //aqui cierro la tabla
         document.write(`</tr>`)
         document.write(`</table`)
     </script>
