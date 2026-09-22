@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="name" content="Javier Muñoz Parra" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Defino las variables y además el ancho a pedir al usuario-
+      let ancho = parseInt(
+        prompt("Introduzca el tamaño en pixeles del tablero de ajedrez"));
+      let fila = 8;
+      let columna = 8;
+      document.write(`<table border="1">`);
+      for (let i = 0; i < fila; i++) {
+        document.write(`<tr>`);
+        for (let j = 0; j < columna; j++) {
+          if ((i + j) % 2 == 0) {
+            document.write(`<td width="${ancho}" height="${ancho}" bgcolor="black"50&nbsp;</td>`)
+          } else {
+            document.write(`<td width="${ancho}" height="${ancho}" bgcolor="white">&nbsp;</td>`)
+          }
+          
+        }
+        document.write(`</tr>`); 
+      }
+      document.write(`</table>`);
+    </script>
+  </body>
+</html>
