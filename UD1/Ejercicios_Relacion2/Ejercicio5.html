@@ -3,9 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="name" content="Javier Muñoz Parra">
+    <title>Ejercicio 5</title>
 </head>
 <body>
-    
+    <script>
+        let j1 = parseInt(prompt("Introduzca el numero secreto"));
+        let j2 = parseInt(prompt("Averigüe el numero secreto"));
+        
+        while (j1 != j2) {
+
+            if (j2 > j1) {
+                alert("El numero secreto, es más pequeño")
+            } else if (j2 < j1){
+                alert("El numero secreto, es más grande")
+            } 
+
+            j2 = parseInt(prompt("Averigüe el numero secreto"));
+            
+        }
+
+        document.write(`<p>Enhorabuena has acertado el numero</p>`)
+        
+    </script>
 </body>
 </html>
