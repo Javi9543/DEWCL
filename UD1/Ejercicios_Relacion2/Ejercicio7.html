@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="name" content="Javier Muñoz Parra">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Pido los datos al usuario y creo una variable contador para más tarde
+        let numeroColumnas = parseInt(prompt("Introduzca el numero de columnas:"))
+        let numeroFilas = parseInt(prompt("Introduzca el numero de filas"))
+        let altura = parseInt(prompt("Introduzca la altura en pixeles: "))
+        let anchura = parseInt(prompt("Introduzca la anchura en pixeles: "))
+        let i = 0;
+        let j = 0;
+        //el programa empieza a pintar la tabla con la altura solicitada por el usuario 
+        document.write(`<table border = "1" cellspacing="2" width="200">`)
+        
+        //este bucle pinta las columnas y filas solicitadas por el usuario incrementando i en 1 numero mas
+        //para poder pintar el siguiente hasta llegar al numero de columnas y filas objetivo
+
+        for (i= 0; i < numeroFilas; i++) {
+            document.write(`<tr>`)
+            for (j = 0; j < numeroColumnas; j++) {
+                document.write(`<td width="${anchura}" height="${altura}">&nbsp;</td>`)
+            }
+            document.write(`</tr>`)
+        }     
+
+        //aqui cierro la tabla
+        document.write(`</table>`)
+    </script>
+</body>
+</html>
