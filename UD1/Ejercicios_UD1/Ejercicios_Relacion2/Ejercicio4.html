@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="name" content="Javier Muñoz Parra">
+    <title>Ejercicio 4</title>
+</head>
+<body>
+        <script>
+        //Pido los datos al usuario y creo una variable contador para más tarde
+        let numeroColumnas = parseInt(prompt("Introduzca el numero de columnas:"))
+        let altura = parseInt(prompt("Introduzca la altura en pixeles: "))
+        let anchura = parseInt(prompt("Introduzca la anchura en pixeles: "))
+        let i = 0;
+        //el programa empieza a pintar la tabla con la altura solicitada por el usuario 
+        document.write(`<table border = "0" cellspacing="2" bgcolor="black" width="200">`)
+        document.write(`<tr bgcolor="white" height="${altura}"`)
+        
+        //este bucle pinta las columnas solicitadas por el usuario incrementando i en 1 numero mas
+        //para poder pintar el siguiente hasta llegar al numero de columnas objetivo
+        while (i < numeroColumnas + 1 ) {
+            document.write(`<td width="${anchura}">&nbsp;</td>`)
+            i++
+        }
+
+        //aqui cierro la tabla
+        document.write(`</tr>`)
+        document.write(`</table`)
+    </script>
+</body>
+</html>
