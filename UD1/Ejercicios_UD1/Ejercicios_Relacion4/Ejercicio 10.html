@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Javier Muñoz Parra">
+    <title></title>
+</head>
+<body>
+    <script>
+        // funcion que calcula el area de un rectangulo
+        function areaRectango(base, altura){
+            let a;
+            
+            a = base * altura;
+
+            return "El área del rectangulo es de: " + a + " cm2";
+        }
+
+        a = parseInt(prompt("Introduzca la altura del rectangulo: "));
+        b = parseInt(prompt("Introduzca la base del rectangulo: "));
+
+        document.write(areaRectango(a, b))
+    </script>
+</body>
+</html>

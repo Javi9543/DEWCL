@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Javier Muñoz Parra">
+    <title>Ej6</title>
+</head>
+<body>
+    <script>
+        // funcion que comprueba si un numero es divisible entre 3
+        function divisible(num){
+            let mensaje;
+
+            // si el resto de dividir entre 3 es 0, el numero es divisible
+            if(num % 3 == 0){
+                mensaje = "el numero " + num + ", es divisible entre 3."
+            } else {
+                mensaje = "el numero " + num + " no es divisible entre 3"
+            }
+
+            return mensaje
+
+        }
+
+        let n = parseInt(prompt("Introduzca un numero para saber si es divisible entre 3"));
+        
+        document.write(divisible(n))
+    </script>
+</body>
+</html>

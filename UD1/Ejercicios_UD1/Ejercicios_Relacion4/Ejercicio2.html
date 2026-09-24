@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Javier Muñoz Parra">
+    <title>Ej2</title>
+</head>
+<body>
+    <script>
+        //funcion que toma cualquier numero de argumentos ya sean texto o numeros y devuelve la suma de
+        //SOLO los numeros
+        debugger;
+        function addOnlyNums(...args){
+            let total = 0;
+
+            document.write(`Los elementos probados son: `)
+            for (let i = 0; i < args.length; i++) {
+                document.write(`${args[i]}, `);
+            }
+
+            for (let i = 0; i < args.length; i++) {
+                if(!isNaN(args[i])){
+                    total += args[i];
+                } else {
+                   document.write(`<br><br>El elemento ${args[i]}, no es una cadena.<br><br>`);
+                }              
+            }
+
+            return " El total de la suma de los numeros introducidos es: " + total;
+        }
+
+        //lamo a la función aqui.
+        let añadirElementos  = addOnlyNums(1, 'cat', 3, 4);
+
+        document.write(añadirElementos);
+
+
+        
+        
+
+    </script>
+</body>
+</html>
