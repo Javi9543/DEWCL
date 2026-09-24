@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Javier Muñoz Parra">
+    <title>Ej5</title>
+</head>
+<body>
+    <script>
+        debugger;
+        //Funcion que suma los NUMEROS PARES de un array y los devuelve por pantalla
+          function sumEveryOther(...args){
+            let total = 0;
+            //la funcion comprueba que si el numero es par, lo guarda en  la variable total y si el siguiente es par se lo suma.
+            for (let i = 0; i < args.length; i++) {
+                if(i % 2 == 0){
+                    total += args[i];
+                }
+            }
+            //aqui devuelvo el total de la suma de los numeros pares del array
+            return "Total de la suma: " + total;
+        } 
+        document.write(`Array 1 -  ` + sumEveryOther(5,6,3,4,1))//9
+        document.write(`Array 2 -  ` + sumEveryOther(10,2,11))//21
+    </script>
+</body>
+</html>

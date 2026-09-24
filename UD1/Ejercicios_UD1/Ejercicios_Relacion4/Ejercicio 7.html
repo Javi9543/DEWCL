@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Javier Muñoz Parra">
+    <title>Ej7</title>
+</head>
+<body>
+    <script>
+       function divisibleEntre(num, num2){
+            let mensaje;
+
+            // si el resultado de dividir num entre num2 es 0, el numero es divisible, si no lo es, manda un mensaje de que no 
+            //es divisible.
+            if(num % num2 == 0){
+                mensaje = "el numero " + num + ", es divisible entre " + num2 + ".";
+            } else {
+                mensaje = "el numero " + num + " no es divisible entre " + num2 + " ";
+            }
+
+            return mensaje
+
+        }
+
+        let num = parseInt(prompt("Introduzca un numero ")); 
+        let num2 = parseInt(prompt("Introduzca el numero por el que quiera saber si es divisible el numero anterior: "))
+
+        document.write(divisibleEntre(num, num2));
+    </script>
+    
+</body>
+</html>
