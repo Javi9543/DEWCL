@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Javier Muñoz Parra">
+    <title>Ej3</title>
+</head>
+<body>
+    <script>
+        // funcion que cuenta el numero de argumentos que se le pasan
+        function countTheArgs(...args){
+            let contador = 0;
+
+            // muestro los elementos del array
+            document.write(`Los elementos probados son: `)
+            for (let i = 0; i < args.length; i++) {
+                document.write(`${args[i]}, `);
+            }
+            
+            // recorro el array y voy incrementando el contador por cada elemento
+            for (let i = 0; i < args.length; i++) {
+                contador++;
+            }
+
+            return "En el array hay un total de: " + contador + " elementos.";
+        }
+
+        let arr1 = countTheArgs('cat', 'dog'); //2 elementos
+        let arr2 = countTheArgs('cat', 'dog', 'frog', 'bear'); //4 elementos
+
+        document.write(`<br><br> ${arr1} `);
+        document.write(`<br> ${arr2}`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Javier Muñoz Parra">
+    <title></title>
+</head>
+<body>
+    <script>
+         // funcion que comprueba si un numero tiene tres digitos
+        function tieneTresDigitos(num){
+            let mensaje; 
+              // un numero tiene tres digitos si es mayor o igual a 100 y menor a 1000
+            if(num >= 100 && num < 1000){
+                mensaje = "El numero: " + num + ", tiene tres digitos";
+            } else {
+                mensaje = "El numero: " + num + ", tiene menos o más de tres digitos";
+            }
+
+            return mensaje;
+        }
+
+        let num = parseInt(prompt("Introduzca un numero para saber si tiene tres digitos: "));
+
+        document.write(tieneTresDigitos(num));
+    </script>
+</body>
+</html>
