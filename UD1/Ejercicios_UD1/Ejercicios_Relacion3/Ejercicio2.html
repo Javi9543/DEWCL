@@ -7,6 +7,16 @@
     <title>Ej2</title>
 </head>
 <body>
-    
+    <script src="./relacion1-3.js"></script>
+
+    <script>
+        let edadActual = parseInt(prompt("Introduzca su edad: "));
+        let edadEstimada = parseInt(prompt("Introduzca la edad estimada a llegar"));
+        let cantidadEstimada = parseInt(prompt("Introduzca las raciones de comida que suele comer en un dia: "))
+
+        let estimacion = calcularRaciones(edadActual, edadEstimada, cantidadEstimada);
+
+        document.write(estimacion);
+    </script>
 </body>
 </html>
