@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Javier Muñoz Parra">
+    <title>Ej11</title>
+</head>
+<body>
+    <script>
+         // funcion que calcula el IMC de una persona y devuelve su tipo de peso
+        function imc(peso, altura){
+            let coeficiente;
+            let resultado;
+            let mensaje; 
+
+            // calculo el IMC dividiendo el peso entre la altura al cuadrado
+            coeficiente = altura * altura;
+            total = peso / coeficiente;
+
+             // compruebo en que rango de IMC en el que está la persona
+            if (total < 18.5){
+                mensaje = "Tienes bajo peso.";
+            } else if (total >= 18.5 && total < 24.9){
+                mensaje = "Estas en tu peso ideal";
+            } else if (total >= 25.0 && total < 29.9){
+                mensaje = "Tienes sobrepeso";
+            } else if (total > 30.0){
+                mensaje = "Tienes obesidad";
+            }
+
+            return mensaje;
+        }
+
+        p = parseInt(prompt("Introduzca su peso: "));
+        a = parseFloat(prompt("Introduzca su altura: "));;
+
+        document.write(imc(p, a));
+    </script>
+</body>
+</html>

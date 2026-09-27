@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Javier Muñoz Parra" />
+    <title>Ej1</title>
+  </head>
+  <body>
+    <script>
+      // funcion que toma cualquier numero de argumentos y devuelve la suma de todos ellos
+      function sum(...args) {
+        let total = 0;
+        
+        // muestro los numeros que se van a sumar
+        document.write(`Los numeros probados son: `)
+        for (let i = 0; i < args.length; i++) {
+            document.write(`${args[i]}, `);
+        }
+
+        // recorro el array y voy sumando cada elemento al total
+        for (let i = 0; i < args.length; i++) {
+          
+          total += args[i];
+        } 
+        
+        // meto en la variable la funcion para poder mostrarla
+        return "<br><br> El total de la suma de todos los numeros es de: " + total;
+      }
+      //meto en la variable la funcion para poder mostr
+      let sumaNumeros = sum(5, 4, 3, 8);
+
+      document.write(sumaNumeros);
+    </script>
+  </body>
+</html>

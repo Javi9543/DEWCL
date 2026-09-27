@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Javier Muñoz Parra">
+    <title></title>
+</head>
+<body>
+    <script>
+        
+        // funcion que comprueba si dos numeros son divisibles entre 3
+        function divisible(num, num2){
+            debugger;
+            let mensaje;
+
+            // si el resto de dividir entre 3 es 0, el numero es divisible
+            if(num % 3 == 0 && num2 % 3 == 0){
+               mensaje = "Los numeros " + num + " y " + num2 + ", son divisibles entre 3" 
+
+            } else if (num2 % 3 == 0) {
+                mensaje = "el numero " + num2 + ", es divisible entre 3, pero el numero " +  num + " no lo es."
+            } else if (num % 3 == 0) {
+                mensaje = "el numero " + num + ", es divisible entre 3, pero el numero " +  num2 + " no lo es."
+            } else {
+                mensaje = "el numero " + num + " y " + num2  + ", no son divisibles entre 3"
+            }
+
+            return mensaje
+
+        }
+
+        let n = parseInt(prompt("Introduzca un numero para saber si es divisible entre 3"));
+        let n2 = parseInt(prompt("Introduzca el segundo numero para saber si es divisible entre 3"))
+
+        document.write(divisible(n, n2))
+    </script>
+</body>
+</html>

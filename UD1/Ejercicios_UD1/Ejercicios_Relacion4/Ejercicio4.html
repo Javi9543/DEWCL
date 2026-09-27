@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ej4</title>
+  </head>
+  <body>
+    <script>
+        // funcion que combina dos arrays SIN usar el spread operator
+        function coombineTwoArrays(ar1, ar2){
+            let ar3 = [];
+
+            for (let i = 0; i < ar1.length; i++) {
+                ar3.push(ar1[i]);
+                
+            }
+
+            for (let i = 0; i < ar2.length; i++) {
+                ar3.push(ar2[i]);
+                
+            }
+            return ar3;
+        }
+        
+        // funcion que combina dos arrays CON el spread operator
+        function combineTwoArrays(ar1, ar2){
+            let ar3 = [];
+
+            ar3 = [...ar1, ...ar2]
+
+            return ar3;
+        }
+        
+        let array1 = [2,4,5,6];
+        let array2 = [1,3,4,7];
+
+        //sin spread operator
+        document.write(`<p>Array sin spread operator</p>`)
+        document.write(coombineTwoArrays(array1, array2));
+        document.write(`<br>`)
+
+        //con spread operator
+        document.write(`<p>Array con spread operator</p>`)
+        document.write(combineTwoArrays(array1, array2));
+
+        document.write(`<p>Arrays originales: </p>`);
+        document.write(`<p>Array 1: `);
+        for (let index = 0; index < array1.length; index++) {
+            document.write( `${array1[index]},`)
+        }
+
+        document.write(`<p>Array 2: `);
+        for (let index = 0; index < array2.length; index++) {
+            document.write( `${array2[index]},`)
+        }
+
+    </script>
+  </body>
+</html>
