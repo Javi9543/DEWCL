@@ -1,0 +1,51 @@
+body{
+    margin-left: 3%;
+    margin-right: 5%;
+    background-color: rgb(44, 44, 44);
+}
+
+h2{
+    color: white;
+}
+
+.Ejercicios{
+    display: flex;
+    gap: 5%;
+}
+
+.Ejercicios a{
+    text-decoration: none;
+    color: white;
+    border: solid 1px rgb(0, 145, 255);
+    background-color: rgb(0, 145, 255);
+    border-radius: 20px;
+    text-align: center;
+    padding: 10px 18px;;
+    
+}
+
+.Ejercicios a:hover{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    transition: 1s;
+
+    
+}
+
+#volver{
+    margin-top: 10%;
+    border: solid 1px darkkhaki;
+    background-color:darkkhaki;
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+    color: rgb(10, 10, 10);
+    border-radius: 25px;
+    font-size: 13px;
+}
+
+#volver:hover{
+    transition: 1s;
+    font-size: 20px;
+}
