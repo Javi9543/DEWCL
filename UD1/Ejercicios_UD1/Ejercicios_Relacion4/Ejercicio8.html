@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Javier Muñoz Parra">
+    <title>Ej8</title>
+</head>
+<body>
+    <script>
+        debugger;
+        // funcion que comprueba si un valor esta dentro de un rango determinado
+        function rango(valor, rangoInf, rangoSup){
+            let mensaje;
+
+            // compruebo si el valor esta dentro del rango, se queda corto o se pasa
+            if (valor > rangoInf && valor < rangoSup) {
+                mensaje = "El numero: " + valor + " está dentro del rango de " + rangoInf + " y " + rangoSup;
+            } else if (valor > rangoSup){
+                mensaje = "El numero: " + valor + " es mayor que el rango introducido.";
+            } else {
+                mensaje = "El numero: " + valor + " es menor que el rango introducido.";
+            }
+
+            return mensaje;
+        }
+        
+        let n2 = parseInt(prompt("Introduzca el rango superior: "));
+        let n3 = parseInt(prompt("Introduzca el rango inferior: "));
+        let n = parseInt(prompt("Introduzca un valor: "));
+
+        document.write(rango(n, n2, n3));
+    </script>
+</body>
+</html>

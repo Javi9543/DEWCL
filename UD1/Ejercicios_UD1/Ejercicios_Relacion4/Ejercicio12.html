@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Javier Muñoz Parra">
+    <title></title>
+</head>
+<body>
+    <script>
+        //funcion que calcula el precio final de un producto
+
+        function precioFinal(precio, descuento){
+            let total;
+            // calculo el descuento
+            let desc = precio * descuento / 100
+            total = precio - desc; //y calculo el precio final
+
+            return "El precio total del producto es de: " + total; // y aqui lo muestro
+        }
+
+        let producto = parseInt(prompt("Introduzca el precio del producto: "));
+        let descuento = parseInt(prompt("Introduzca el descuento: "));
+
+        document.write(precioFinal(producto, descuento));
+    </script>
+    
+</body>
+</html>

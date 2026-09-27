@@ -1,0 +1,50 @@
+body {
+    margin-left: 3%;
+    margin-right: 5%;
+    text-align: center;
+    background-color: rgb(44, 44, 44);
+}
+
+.Relacion3 h3 {
+    font-size: 22px;
+    color: white;
+}
+
+.Relacion3 a {
+    text-decoration: none;
+    color: white;
+    background-color: dodgerblue;
+    display: inline-block;
+    padding: 10px 150px;
+    border-radius: 25px;
+    font-size: 18px;
+    transition: 0.3s;
+    
+}
+
+.Relacion3 a:hover {
+    background-color: royalblue;
+    transform: scale(1.05);
+}
+
+#volver{
+    margin-top: 10%;
+    border: solid 1px darkkhaki;
+    background-color:darkkhaki;
+    text-decoration: none;
+    display: inline;
+    padding: 8px 16px;
+    color: rgb(10, 10, 10);
+    border-radius: 25px;
+    font-size: 13px;
+    float: left;
+}
+
+#volver:hover{
+    transition: 1s;
+    font-size: 20px;
+}
+
+#volver:hover {
+    transform: scale(1.1);
+}
