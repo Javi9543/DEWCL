@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Javier Muñoz Parra" />
+    <title>Ej7</title>
+</head>
+<body>
+    <script>
+        //lo que hace esta funcion es:
+        // 1. Guarda el numero en la variable num (4)
+        // 2. coge el numero que hay en num y lo multuplica por si mismo para conseguir su cuadrado ej. (4*4)
+        // 3. en la variable suma, sumo el valor que hay en la propia variable + el cuadrado ej 
+        // (4 (por ejemplo si el primer numero era 2) + 16 = 20)
+        // 4. la funcion devuelve, la suma de todos los cuadrados introducidos (suma = 20)
+
+        function squareAndSum(...numeros){
+            debugger;
+            let num; 
+            let cuadrado
+            let suma = 0;
+
+            for (let i = 0; i < numeros.length; i++) {
+                num = numeros[i];
+                cuadrado = num * num;
+                suma = suma + cuadrado;
+            }
+
+            return suma;
+        }
+
+        document.write(squareAndSum(2,4,3)) //29
+        document.write(`<br> <br>`)
+        document.write(squareAndSum(1,2)) //5
+    </script>
+</body>
+</html>
