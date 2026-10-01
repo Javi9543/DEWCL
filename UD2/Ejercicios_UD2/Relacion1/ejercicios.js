@@ -84,3 +84,54 @@ function horaActual1(){
 
     return "Son las: " + horas1 + "h y " +  minutos1 + "m"; //devuelvo la hora y los minutos
 }
+
+
+function operaciones(opc){
+    let resultado = 0;
+    let resultado1 = 0;
+    let resultado2 = 0;
+    let resultado3 = 0;
+    let resCos = 0;
+    let resSeno = 0;
+    let resTang = 0;
+
+    switch (opc) {
+        case 1:
+            let base = parseInt(prompt("Introduzca el numero para calcular su potencia: "));
+            let exponente = parseInt(prompt("Introduzca el numero exponente: "))
+            resultado = base ** exponente;
+
+            return resultado;
+        
+        case 2:
+            debugger;
+            let num = parseFloat(prompt("Introduzca un numero para calcular su raiz"))
+            
+            for (let i = 1; i * i <= num; i++){
+                resultado = i;               
+            }
+
+            return resultado;
+        case 3:
+            let num1 = parseInt(prompt("Introduzca un numero para saber sus rendondeos: "))
+
+            resultado1 = Math.floor(num1);
+            resultado2 = Math.round(random()*num1);
+            resultado3 = Math.round();
+
+            return "Redondeo más alta: " + resultado3 + " | Redondeo al alza: " + resultado2 + " | Redondeo a la baja: " + resultado1
+
+        case 4: 
+            let angulo = prompt("Introduzca el angulo de")
+            let radianes = angulo * (3.14 /180);
+            resCos = Math.cos(radianes);
+            resSeno = Math.sin(radianes);
+            resTang = Math.tan(radianes);
+
+            return "Coseno: " + resCos + " | Seno" + resSeno + " | Tangente: " + resTang;
+            
+        default:
+
+            return "Opcion introducida invalida, recargue pagina e intentelo de nuevo. ";
+    }
+}
