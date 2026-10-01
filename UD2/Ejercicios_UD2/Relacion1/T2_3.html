@@ -8,18 +8,10 @@
     <title>T2_ej3</title>
 </head>
 <body>
+    <h3>Horas Actuales</h3>
     <script>
-        let inicio = Date.now();
-        
-        let nombre = prompt("Introduzca su nombre: ");
-        let apellido = prompt("Introduzca su apellido: ");
-        
-        let fin = Date.now();
-
-        let calculoTiempo = (fin - inicio) / 1000;
-        let total = Math.floor(calculoTiempo);
-
-        document.write(`<p> El usuario ${nombre} ${apellido},as ha tardado ${total} segundo/s`);
+        document.write(`1. ${horaActual()} <br> <br>`);
+        document.write(`2. ${horaActual1()}`)
     </script>
 </body>
 </html>
