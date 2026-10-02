@@ -170,3 +170,12 @@ function SepNombre(nombre, apellidos){
 
     return " Nombre: "  + nombre + "\n Apellido 1: " + apellido1 + "\n Apellido 2: " + apellido2 
 }
+
+function mayor(num1, num2, num3){
+    let mensaje;
+
+    if (num1 > num2 && num1 > num3 ) {
+        mensaje = "El numero: " + num1 + "Es mayor que los numeros: " + num2 + ", " + num3
+    }
+    
+}
