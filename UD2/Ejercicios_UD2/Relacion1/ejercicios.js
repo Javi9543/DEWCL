@@ -211,7 +211,26 @@ function contarA(cadena){
 
 //Ejercicio 9 
 
+function contVocales(frase){
+    let contador = 0;
 
+    const vocales = ["a", "e", "i", "o", "u"];
+    const cadena = frase.split("")
+    const palabras = frase.split(" ").length;
+
+
+    for (let i = 0; i < cadena.length; i++) {
+        for (let j = 0; j < vocales.length; j++) {
+            if (cadena[i]===vocales[j]) {
+                contador++;
+            }
+            
+        }
+
+    }
+
+    return "tiene " + contador + " vocales y " + palabras + " palabras";
+}
 
 //Ejercicio 10
 
