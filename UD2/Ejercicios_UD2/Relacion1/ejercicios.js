@@ -86,7 +86,11 @@ function horaActual1(){
 }
 
 
+//Ejercicio 4 - Este esta en el archivo HTML: "T2_ej4.html"
+
+//Ejercicio 5
 function operaciones(opc){
+    //declaro las variables para los diferentes resultados de la calculadora
     let resultado = 0;
     let resultado1 = 0;
     let resultado2 = 0;
@@ -97,6 +101,7 @@ function operaciones(opc){
 
     switch (opc) {
         case 1:
+            //pido la base y el exponente, y con el operador '**' calculo la potencia de la base introducida
             let base = parseInt(prompt("Introduzca el numero para calcular su potencia: "));
             let exponente = parseInt(prompt("Introduzca el numero exponente: "))
             resultado = base ** exponente;
@@ -104,6 +109,7 @@ function operaciones(opc){
             return resultado;
         
         case 2:
+            //pido un numero y con el siguiente bucle for calculo su raiz
             debugger;
             let num = parseFloat(prompt("Introduzca un numero para calcular su raiz"))
             
@@ -112,7 +118,9 @@ function operaciones(opc){
             }
 
             return resultado;
+
         case 3:
+            //Pido un numero, y devuelvo los rendodeos requeridos por el ejericicio
             let num1 = parseInt(prompt("Introduzca un numero para saber sus rendondeos: "))
 
             resultado1 = Math.floor(num1);
@@ -122,7 +130,7 @@ function operaciones(opc){
             return "Redondeo más alta: " + resultado3 + " | Redondeo al alza: " + resultado2 + " | Redondeo a la baja: " + resultado1
 
         case 4: 
-            let angulo = prompt("Introduzca el angulo de")
+            let angulo = prompt("Introduzca un angulo:")
             let radianes = angulo * (3.14 /180);
             resCos = Math.cos(radianes);
             resSeno = Math.sin(radianes);
@@ -138,6 +146,7 @@ function operaciones(opc){
 
 //Ejercicio 6
 function longNombre(nombre, apellidos){
+    //lo que hace esta funcion es coger el nombre y apellidos del usuario y devuelve la longitud total de su nombre
     let contador = 0;
 
     let nombCompleto = nombre + " " + apellidos;
@@ -152,6 +161,7 @@ function longNombre(nombre, apellidos){
 }
 
 function cadEnMinusculasYMayusculas(nombre, apellidos){
+    //lo que hace esta funcion es devolver el nombre del usuario en mayusculas y minusculas
     let nombreCompleto = nombre + " " + apellidos;
 
     let pasoAMinusculas = nombreCompleto.toLowerCase();
@@ -161,7 +171,7 @@ function cadEnMinusculasYMayusculas(nombre, apellidos){
 }
 
 function SepNombre(nombre, apellidos){
-    debugger;
+    //lo que hace esta funcion es mostrar de manera separada el nombre y apellidos del usuario
     const ape = apellidos.split(" ");
 
     let apellido1 = ape[0];
@@ -173,6 +183,7 @@ function SepNombre(nombre, apellidos){
 
 //Ejercicio7
 function numeroMayor(num1, num2, num3){
+    //esta funcion, lo que hace es devolver el mayor de los numeros mediante la funcion "Max" usando el objeto Math.
     let numeroGrande;
 
     numeroGrande = Math.max(num1, num2, num3);
@@ -183,8 +194,8 @@ function numeroMayor(num1, num2, num3){
 }
 
 //Ejercicio 8
-
 function contarA(cadena){
+    //lo que hace esta funcion, es devolver la cantidad total de caracteres 'a' que hay en la cadena introducida por el usuario.
     const cad = cadena.split("");
     let contador = 0;
 
@@ -196,5 +207,15 @@ function contarA(cadena){
     }
 
     return contador;
-
 }
+
+//Ejercicio 9 
+
+
+
+//Ejercicio 10
+
+
+
+//Ejercicio 11
+
