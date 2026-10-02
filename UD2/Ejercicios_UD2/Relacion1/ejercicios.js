@@ -268,3 +268,12 @@ function contarVocales(frase) {
 
 //Ejercicio 11
 
+function invertirCadena(frase){
+    let cadFinal = "";
+
+    for (let i = frase.length - 1; i >= 0; i--) {
+        cadFinal += frase[i];
+    }
+
+    return cadFinal;
+}
