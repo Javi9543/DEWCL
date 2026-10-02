@@ -135,3 +135,38 @@ function operaciones(opc){
             return "Opcion introducida invalida, recargue pagina e intentelo de nuevo. ";
     }
 }
+
+//Ejercicio 6
+function longNombre(nombre, apellidos){
+    let contador = 0;
+
+    let nombCompleto = nombre + " " + apellidos;
+
+    const nombAcaracteres = nombCompleto.split("");
+
+    for (let i = 0; i < nombAcaracteres.length; i++) {
+        contador++;
+    }
+
+    return "La longitud de su nombre es de " + contador + " Caracteres";
+}
+
+function cadEnMinusculasYMayusculas(nombre, apellidos){
+    let nombreCompleto = nombre + " " + apellidos;
+
+    let pasoAMinusculas = nombreCompleto.toLowerCase();
+    let pasoAmayusculas = nombreCompleto.toUpperCase();
+    
+    return "Nombre completo en minusculas: " + pasoAMinusculas + " | Nombre en mayusculas: " + pasoAmayusculas;
+}
+
+function SepNombre(nombre, apellidos){
+    debugger;
+    const ape = apellidos.split(" ");
+
+    let apellido1 = ape[0];
+    let apellido2 = ape[1];
+
+
+    return " Nombre: "  + nombre + "\n Apellido 1: " + apellido1 + "\n Apellido 2: " + apellido2 
+}
