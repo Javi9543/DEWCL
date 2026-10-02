@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Javier Muñoz Parra">
+    <title>T2_ej2</title>
+    <script src="ejercicios.js"></script>
+</head>
+<body>
+    <p>Abre la consola para ver el resultado del programa</p>
+    <script>    
+        let fechaCumpleaños = prompt("Introduzca la fecha de su cumpleaños en formato: YYYY-MM-DD");
+
+        if (fechaCumpleaños && fechaCumpleaños.length === 10 && fechaCumpleaños.split("-").length === 3){
+            console.log(cumpleanyosDomingo(new Date(fechaCumpleaños)));
+        } else {
+            alert("La fecha introducida debe seguir el formato YYYY-MM-DD, recargue la página e intentelo de nuevo")
+        }
+            
+    </script>
+</body>
+</html>
