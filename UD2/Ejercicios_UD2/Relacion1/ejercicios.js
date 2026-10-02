@@ -234,7 +234,37 @@ function contVocales(frase){
 
 //Ejercicio 10
 
+function contarVocales(frase) {
+    debugger;
+    let mensaje;
+    contadorVocalA = 0;
+    contadorVocalE = 0;
+    contadorVocalI = 0;
+    contadorVocalO = 0;
+    contadorVocalU = 0;
 
+    const cadena = frase.split("");
+    
+
+    for (let i = 0; i < cadena.length; i++) {
+        if (cadena[i] == "a" || cadena[i] == "A" ){
+            contadorVocalA++;
+        } else if (cadena[i] == "e" || cadena[i] == "E" ) {
+            contadorVocalE++
+        } else if (cadena[i] == "i" || cadena[i] == "I" ) {
+            contadorVocalI++
+        } else if (cadena[i] == "o" || cadena[i] == "O" ) {
+            contadorVocalO++
+        } else if (cadena[i] == "u" || cadena[i] == "U" ) {
+            contadorVocalU++
+        } else {
+            mensaje = "no se pudo contar las vocales"
+        }
+        
+    }
+
+    return  "La vocal A se repite: " + contadorVocalA + " veces \n" + "  La vocal E se repite: " + contadorVocalE  + " veces" + "  \n La vocal I se repite: " + contadorVocalI +  " veces" + " \n La vocal O se repite: " + contadorVocalO + " veces" + " \n La vocal U se repite: " + contadorVocalU + " veces"
+}
 
 //Ejercicio 11
 

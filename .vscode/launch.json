@@ -4,11 +4,12 @@
     // Para más información, visite: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+
         {
             "type": "chrome",
             "request": "launch",
             "name": "Iniciar Chrome para localhost",
-            "url": "http://127.0.0.1:5500/UD2/Ejercicios_UD2/Relacion1/T2_ej9.html",
+            "url": "http://127.0.0.1:5500/UD2/Ejercicios_UD2/Relacion1/T2_ej10.html",
         }
     ]
 }
