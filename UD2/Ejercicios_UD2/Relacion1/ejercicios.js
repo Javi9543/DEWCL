@@ -171,6 +171,7 @@ function SepNombre(nombre, apellidos){
     return " Nombre: "  + nombre + "\n Apellido 1: " + apellido1 + "\n Apellido 2: " + apellido2 
 }
 
+//Ejercicio7
 function numeroMayor(num1, num2, num3){
     let numeroGrande;
 
@@ -179,4 +180,21 @@ function numeroMayor(num1, num2, num3){
 
     return numeroGrande;
     
+}
+
+//Ejercicio 8
+
+function contarA(cadena){
+    const cad = cadena.split("");
+    let contador = 0;
+
+    for (let i = 0; i < cad.length; i++) {
+        if(cad[i] == 'a'){
+            contador++;
+        }
+                
+    }
+
+    return contador;
+
 }
