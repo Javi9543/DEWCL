@@ -171,11 +171,12 @@ function SepNombre(nombre, apellidos){
     return " Nombre: "  + nombre + "\n Apellido 1: " + apellido1 + "\n Apellido 2: " + apellido2 
 }
 
-function mayor(num1, num2, num3){
-    let mensaje;
+function numeroMayor(num1, num2, num3){
+    let numeroGrande;
 
-    if (num1 > num2 && num1 > num3 ) {
-        mensaje = "El numero: " + num1 + "Es mayor que los numeros: " + num2 + ", " + num3
-    }
+    numeroGrande = Math.max(num1, num2, num3);
+    
+
+    return numeroGrande;
     
 }
