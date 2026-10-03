@@ -64,4 +64,17 @@ function cadenaBienFormada(cadena){
     return cadenaNueva;
 }
 
+//Ejercicio2
+function ComprobarMayusculasYMinusculas(cadena){
+    let mensaje = ""
+    if (cadena === cadena.toUpperCase()){
+        mensaje = "esta en mayusculas"
+    } else if (cadena === cadena.toLowerCase()){
+        mensaje = "esta en minusculas"
+    } else {
+        mensaje = "es una mezcla de minusculas y mayusculas"
+    }
+
+    return mensaje;
+}
 
