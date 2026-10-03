@@ -78,3 +78,60 @@ function ComprobarMayusculasYMinusculas(cadena){
     return mensaje;
 }
 
+function AparicionSubCadena(cadena, subcadena){
+    const posiciones = []
+    subcadena = subcadena.toLowerCase()
+    subcadena1 = subcadena;
+
+    cadena  = cadena.toLowerCase()
+    let poscion = cadena.indexOf(subcadena1);
+
+    //ejercicio 3
+
+    while (poscion !== -1 ){
+        posiciones.push(poscion);
+
+        poscion = cadena.indexOf(subcadena, poscion + 1);
+    }
+
+    return "La subcadena: " + subcadena + " aparece en las posiciones " + posiciones + " de la cadena introducida.";
+}
+
+//ejercicio 4
+
+function separarVocalesYConsonantes(cadena) {
+    debugger;
+    let vocales1 = "aeiouAEIOU";
+    let vocales = "";
+    let consonantes = "";
+
+    for (let i = 0; i < cadena.length; i++) {
+        let char = cadena.charAt(i);
+
+        if(vocales1.indexOf(char)!== -1){
+            vocales += char;
+        } else if (char !== " "){
+            consonantes+= char;
+        }
+    }
+
+    return vocales + " " + consonantes;
+}
+
+//ejercicio 5
+
+function eliminarRepetidos(cadena){
+    let resultado = "";
+
+    for (let i = 0; i < cadena.length; i++) {
+        let char = cadena.charAt(i);
+
+        if (resultado.indexOf(char)=== -1) {
+            resultado += char;
+        }
+        
+    }
+
+    return resultado;
+}
+
