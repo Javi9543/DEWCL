@@ -135,3 +135,18 @@ function eliminarRepetidos(cadena){
     return resultado;
 }
 
+//Ejercicio 6
+
+function encontrarSubcadenaEnCadena(cadena, subcadena){
+    debugger;
+    let pos = cadena.indexOf(subcadena);
+    let mensaje = "";
+
+    if(pos !== -1){
+        mensaje = "La subcadena: " + subcadena + ", pertenece a la cadena: " + cadena + ", y se encuentra en la posicion " + pos;
+    } else {
+        mensaje = "Subcadena: " + subcadena + " no es de la cadena: " + cadena;
+    } 
+
+    return mensaje;
+}
