@@ -194,7 +194,7 @@ function contadorPalabras(cadena){
 
     for (let i = 0; i < cadena.length; i++) {
         if (cadena.charAt(i) !== " ") {
-            
+
             if (!esPalabra){
                 contador++;
                 esPalabra = true;  
@@ -207,4 +207,55 @@ function contadorPalabras(cadena){
     }
 
     return contador;
+}
+
+//Ejercicio 9
+
+function validarTarjetaCredito(tarjeta){
+    //Compruebo si la longitud de la tarjeta es de 16 caracteres
+    if(tarjeta.length !== 16){
+        return false;
+    }
+
+    let total = 0;
+    let iguales = true;
+    let primerCaracter = tarjeta.charAt(0);
+
+    for (let i = 0; i < tarjeta.length; i++) {
+        let caracter = tarjeta.charAt(i);
+
+        //compruebo que los caracteres sean entre 0 y 9
+        if(caracter < 0 || caracter > 9){
+            return false;
+        }
+
+        //acumulo la suma para más tarde comprobar que de más de 16;
+        total += Number(caracter);
+        
+        if (caracter !== primerCaracter){
+            iguales = false;
+        }
+    }
+    
+    //compruebo que no haya digitos iguales
+    if (iguales){
+        return false;
+    }
+
+    
+    //compruebo que el ultimo digito sea par
+    let ultimoCar = tarjeta.charAt(15);
+    let ultimoNumero = Number(ultimoCar)
+    if (ultimoNumero % 2 !== 0){
+        return false;
+    }
+    
+    //compruebo que la suma de todos los digitos sea MAYOR a 16
+    if (total < 16){
+        return false
+    }
+
+    //si pasa todas las pruebas devuelve true, si no en la comprobacion que falle, devolverá false.
+    return true;
+    
 }
