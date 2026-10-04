@@ -259,3 +259,6 @@ function validarTarjetaCredito(tarjeta){
     return true;
     
 }
+
+//Ejercicio 10
+
