@@ -138,7 +138,6 @@ function eliminarRepetidos(cadena){
 //Ejercicio 6
 
 function encontrarSubcadenaEnCadena(cadena, subcadena){
-    debugger;
     let pos = cadena.indexOf(subcadena);
     let mensaje = "";
 
@@ -147,6 +146,43 @@ function encontrarSubcadenaEnCadena(cadena, subcadena){
     } else {
         mensaje = "Subcadena: " + subcadena + " no es de la cadena: " + cadena;
     } 
+
+    return mensaje;
+
+}
+
+//Ejercicio 7
+function limpiarCadena(cadena){
+    cadena = cadena.toLowerCase();
+    let cadLimpia = "";
+
+    for (let i = 0; i < cadena.length; i++) {
+        if (cadena.charAt(i) !== " ") {
+            cadLimpia+= cadena.charAt(i);
+        }
+    }
+
+    return cadLimpia;
+}
+
+function esPalindromo(cadena){
+    debugger;
+    let cad1 = limpiarCadena(cadena);
+
+    let palindromo = "";
+    let mensaje = "";
+
+    
+
+    for (let i = cad1.length -1 ; i >= 0; i--) {
+        palindromo += cad1.charAt(i);
+    }
+
+    if (cad1 == palindromo){
+        mensaje = "La cadena " + cadena + ",  es un palindromo."
+    } else {
+        mensaje = "La cadena " + cadena + ", no es un palindromo."
+    }
 
     return mensaje;
 }
