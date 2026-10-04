@@ -257,8 +257,66 @@ function validarTarjetaCredito(tarjeta){
 
     //si pasa todas las pruebas devuelve true, si no en la comprobacion que falle, devolverá false.
     return true;
-    
 }
 
 //Ejercicio 10
+function limpiarTarjeta(tar){
+    let tarjetaLimpia = "";
+    //recorro la tarjeta y voy eliminando los guiones y metiendolos a la variable tarjetaLimpia
+    for (let i = 0; i < tar.length; i++) {
+        if(tar.charAt(i) !== "-"){
+            tarjetaLimpia+= tar.charAt(i);
+        }       
+    }
 
+    return tarjetaLimpia;
+}
+
+function validarTarjetaCredito(tarjeta){
+    //Para aprovechar el codigo anterior, limpio los guiones de la tarjeta
+    tarLimpia = limpiarTarjeta(tarjeta);
+    if(tarLimpia.length !== 16){
+        return false
+    }
+
+    let total = 0;
+    let iguales = true;
+    let primerCaracter = tarLimpia.charAt(0);
+
+    //compruebo que los digitos sean entre 0 y 9
+    for (let i = 0; i < tarLimpia.length; i++) {
+        let caracter = tarLimpia.charAt(i);
+
+        if (caracter < "0" || caracter > "9"){
+            return false;
+        }
+
+        //voy sumando para luego comprobar que la suma sea MAYOR a 16
+        total += Number(caracter);
+
+        //compruebo si son iguales
+        if (caracter !== primerCaracter){
+            iguales = false;
+        }
+    }
+
+    //compruebo que sean iguales
+    if (iguales){
+        return false
+    }
+
+    //compruebo que el ultimo digito sea par
+    let ultimoCar = tarLimpia.charAt(15);
+    let ultimoNumero = Number(ultimoCar)
+    if (ultimoNumero % 2 !== 0){
+        return false;
+    }
+
+    //compruebo que la suma de todos los digitos sea MAYOR a 16
+    if (total <= 16) {
+        return false;
+    }
+
+    //si pasa todas las pruebas la tarjeta es valida
+    return true
+}   
