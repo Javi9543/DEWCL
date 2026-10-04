@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Javier Muñoz Parra">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let inicio = Date.now();
+        
+        let nombre = prompt("Introduzca su nombre: ");
+        let apellido = prompt("Introduzca su apellido: ");
+        
+        let fin = Date.now();
+
+        let calculoTiempo = (fin - inicio) / 1000;
+        let total = Math.floor(calculoTiempo);
+
+        document.write(`<p> El usuario ${nombre} ${apellido},as ha tardado ${total} segundo/s`);
+    </script>
+</body>
+</html>
