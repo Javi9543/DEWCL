@@ -34,3 +34,19 @@ function crearVentanas() {
 }
 
 //Ejercicio 4
+function cuentaAtras() {
+  let segundos = 5;
+  const contador = document.getElementById("contador");
+  const urlDestino = "https://www.pccomponentes.com";
+
+  const interval = setInterval(() => {
+    segundos--;
+
+    if (segundos > 0) {
+      contador.textContent = segundos;
+    } else {
+      clearInterval(interval);
+      window.location.href = urlDestino;
+    }
+  }, 1000);
+}
