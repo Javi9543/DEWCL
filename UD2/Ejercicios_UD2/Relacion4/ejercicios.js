@@ -50,3 +50,17 @@ function cuentaAtras() {
     }
   }, 1000);
 }
+
+//Ejercicio 5
+function crearVentanaSecundaria() {
+  ventana = window.open("ventanaSecundaria.html", "", "height=500,width=400,left=1500");
+}
+
+function cerrarVentanaSecundaria() {
+  ventana.close();
+}
+
+function enviarMensaje(){
+  texto = prompt("Introduzca el mensaje a enviar a la ventana secundaria")
+  ventana.recibeMensaje(texto);
+}
