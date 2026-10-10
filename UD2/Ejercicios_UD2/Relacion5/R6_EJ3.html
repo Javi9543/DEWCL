@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="ejercicios.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+
+    <p id="info"></p>
+    <p id="estVentana"></p>
+
+    <!-- apartado a)-->
+    <p>
+        <input type="button" onclick="mostrarOpcion('abrirVentana')" value="abrir Ventana"/>
+    </p>
+
+    <!-- apartado b) -->
+    <p>
+        <input type="button" onclick="comprobarEstadoVentana()" value="comprobar Ventana"/>
+    </p>
+
+    <!-- apartado c)-->
+    <p>
+        <input type="button" onclick="ventanaConTitulo()" value="Ventana Con Titulo"/>
+    </p>
+    
+    <!-- apartado d) -->
+    <!-- cerrar ventana actual -->
+    <p>
+        <input type="button" onclick="cerrarVentanaActual()" value="cerrar Venana Actual">  
+
+        <!-- Cerrar ventana emergente -->
+        <input type="button" onclick="cerrarVentanaEmergente()" value="cerrar Venana Emergente">  
+    </p>
+    
+    <!--apartado f)-->
+    <p>
+        <input type="button" value="abrir Ventana 300x100" onclick="abrirVentanaV2()">
+    </p>
+
+    <!--apartado g)-->
+    <p>
+        <input type="button" value="abrir Ventana con mensaje" onclick="abrirVentanaV3()">
+    </p>
+    
+    <!--apartado h)-->
+    <p>
+        <input type="button" value="Mover Ventana" onclick="moverVentana()">
+    </p>
+  </body>
+</html>
