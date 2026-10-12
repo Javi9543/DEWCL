@@ -8,7 +8,6 @@ function numeroAleatoriov1(){
 
 //caso 2
 function numeroAleatoriov2(){
-    debugger;
     let max = 200;
     let min = 100;
     //esto lo que hace es que establezco la cantidad de numeros (es decir el siguiente calculo (max - min + 1))
@@ -42,4 +41,13 @@ function calculosAngulos(num){
     tan = Math.tan(radianes);
 
     return("Los calculos del angulo " + ang + " son los siguientes: " + " | Sen = " + sen + " | Coseno = " + cos + " | Tangente = " + tan);
+}
+
+function calculosHipotenusa(t1, t2){
+    debugger;
+    a = t1 * t1;
+    b = t2 * t2;
+    c = Math.round(Math.sqrt(a + b));
+
+    return "La hipotenusa de " + t1 + ", " + t2 + " es: " + c;
 }
