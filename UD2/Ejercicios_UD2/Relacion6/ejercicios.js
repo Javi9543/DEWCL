@@ -1,10 +1,12 @@
 //Ejercicio 1
+//caso 1
 function numeroAleatoriov1(){
     let numAleatorio = Math.random();
 
     return numAleatorio;
 }
 
+//caso 2
 function numeroAleatoriov2(){
     debugger;
     let max = 200;
@@ -16,6 +18,7 @@ function numeroAleatoriov2(){
     return aleatorio;
 }
 
+//caso 3
 function numeroAleatoriov3(n1, n2){
     //aqui paso los numeros del usuario
     let max = n1;
