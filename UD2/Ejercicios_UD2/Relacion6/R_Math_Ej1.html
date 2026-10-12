@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Javier Muñoz Parra">
+    <script src="ejercicios.js"></script>
+    <title>R_Math_Ej1</title>
+</head>
+<body>
+
+    <h1>Numeros aleatorios con Math</h1>
+
+    <script>
+        let num1;
+        let num2;
+
+        document.write(`<p>Numero aleatorio entre 0 y 1: ${numeroAleatoriov1()}</p>`);
+        document.write(`<p>Numero aleatorio entre 100 y 200: ${numeroAleatoriov2()}</p>`);
+
+        num1 = parseInt(prompt("Introduzca el primer numero (el mayor del rango)"));
+        num2 = parseInt(prompt("Introduzca el segundo numero (el menor del rango)"));
+        document.write(`<p>Numero aleatorio entre ${num1} y ${num2}: ${numeroAleatoriov3(num1, num2)}</p>`);
+    </script>
+</body>
+</html>
