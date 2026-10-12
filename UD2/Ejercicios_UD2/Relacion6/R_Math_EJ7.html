@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Javier Muñoz Parra" />
+    <script src="ejercicios.js"></script>
+    <title>R_Math_Ej7</title>
+</head>
+<body>
+    <h1>Tabla con resultado seno</h1>
+    <script>
+        let numLimite = parseInt(prompt("Introduzca un numero limite para mostrar el seno de cada uno"));
+        
+        let tabla = "<table border=1>";
+        tabla += "<tr><th>Número</th><th>Seno</th></tr>"
+
+        for (let i = 0; i <= numLimite; i++) {
+           let seno = Math.sin(i);
+           tabla += "<tr>";
+           tabla += "<td>" +  i + "</td>";
+           tabla += "<td>" +  seno + "</td>";
+           tabla += "</tr>";
+        }
+
+        tabla += "</table>";
+
+        document.write(tabla);
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Javier Muñoz Parra" />
+    <script src="ejercicios.js"></script>
+    <title>R_Math_Ej4</title>
+  </head>
+  <body>
+    <h1>Calculo de hipotenusa</h1>
+
+    <script>
+        let salir;
+        do {
+            //pido los valores
+            let tamano1 = parseInt(prompt("Introduzca el tamaño 1 del triangulo rectangulo: "));
+            let tamano2 = parseInt(prompt("Introduzca el tamaño 2 del triangulo rectangulo: "));
+            
+            //imprimo el resultado
+            document.write(`${calculosHipotenusa(tamano1, tamano2)} <br>`);
+            
+            //y compruebo si el usuario quiere seguir o dejar de introducir numeros
+            salir = parseInt(prompt("Introduzca 0 para salir o 1 para continuar: "));
+        } while (salir === 1);
+    </script>   
+  </body>
+</html>
