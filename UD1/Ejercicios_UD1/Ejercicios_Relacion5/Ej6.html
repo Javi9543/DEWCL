@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Javier Muñoz Parra" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+
+        //esta funcion comprueba si el objeto que le pasamos al metodo, es el mismo que en el array
+        // si es así devuelve true, si no está en el array, el programa devuelve false
+      function duplicado(ar, obj) {
+        for (let i = 0; i < ar.length; i++) {
+          if (ar[i] === obj) {
+            return true;
+          }
+        }
+
+        return false;
+      }
+
+      //esta funcion lo que hace es que, va metiendo los elementos introducidos (para eso la variable tipos),
+      //al array ar1, de manera que si el elemnento es unico, lo mete al array nuevo, si el elemento ya está en el array
+      // mediante un if, el programa comprueba que si ya está lo omite y pasa al siguiente elemento.
+      function onlyUniques(...tipos) {
+        debugger;
+        const ar1 = [];
+
+        for (let i = 0; i < tipos.length; i++) {
+          if (!duplicado(ar1 , tipos[i] )) {
+            ar1[ar1.length] = tipos[i];
+          }
+        }
+        return ar1;
+      }
+
+      document.write(onlyUniques("hola", "caracola", "hola", "como estas"));
+      document.write(`<br> <br>`)
+      document.write(onlyUniques(1,4,7,1,2,7,4))
+    </script>
+  </body>
+</html>

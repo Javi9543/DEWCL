@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ej1</title>
+  </head>
+  <body>
+    <h1>Elementos Navegador</h1>
+    <table border="1">
+      
+      <tr>
+        <td id="codNombre"></td>
+      </tr>
+      
+      <tr>
+        <td id="AppName"></td>
+      </tr>
+      
+      <tr>
+        <td id="appVersion"></td>
+      </tr>
+
+      <tr>
+        <td id="cookiesEnabled"></td>
+      </tr>
+
+      <tr>
+        <td id="Language"></td>
+      </tr>
+
+      <tr>
+        <td id="Online"></td>
+      </tr>
+
+      <tr>
+        <td id="Platform"></td>
+      </tr>
+    </table>
+
+    <script>
+      document.getElementById("codNombre").innerHTML = "AppCodeName: " + navigator.appCodeName;
+      document.getElementById("AppName").innerHTML = "AppName: " + navigator.appName;
+      document.getElementById("appVersion").innerHTML = "appVersion: " + navigator.appVersion;
+      document.getElementById("cookiesEnabled").innerHTML = "CookiesEnabled: " + navigator.cookieEnabled;
+      document.getElementById("Language").innerHTML = " Language: " + navigator.language;
+      document.getElementById("Online").innerHTML = " Online: " + navigator.onLine;
+      document.getElementById("Platform").innerHTML = "PlatForm: " + navigator.platform
+    </script>
+
+  </body>
+</html>

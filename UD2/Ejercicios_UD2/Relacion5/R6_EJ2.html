@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej2</title>
+</head>
+<body>
+    <table border="7">
+        <tr>
+            <td id="pixel-depth"></td>
+        </tr>
+
+        <tr>
+            <td id="height"></td>
+        </tr>
+
+        <tr>
+            <td id="width"></td>
+        </tr>
+
+        <tr>
+            <td id="availHeight"></td>
+        </tr>
+
+        <tr>
+            <td id="availWidth"></td>
+        </tr>
+    </table>
+    <script>
+        document.getElementById("pixel-depth").innerHTML = "Pixel Depth: " + screen.pixelDepth;
+        document.getElementById("height").innerHTML = "Height: " + screen.height + " px";
+        document.getElementById("width").innerHTML = "Width: " + screen.width + " px";
+        document.getElementById("availHeight").innerHTML = "AvailHeigth: " + screen.availHeight + " px";
+        document.getElementById("availWidth").innerHTML = "AvailWidth: " + screen.availWidth + " px";
+        document.getElementById("colordepth").innerHTML = "ColorDepth: " + screen.colorDepth + " px"
+    </script>
+</body>
+</html>
