@@ -75,3 +75,11 @@ function calcularPotencias(b, e){
     let pot = Math.pow(b, e);
     return pot;
 }
+
+//Ejercicio8
+
+function imagenAleatoria(imagenes){
+    let numAleatorio = Math.random() * imagenes.length;
+    let i = Math.floor(numAleatorio);
+    return imagenes[i];
+}
