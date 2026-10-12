@@ -68,3 +68,10 @@ function cacularRaiz2grado(a, b, c){
     return "Resultado positivo raiz: " + rPos + " | Resultado Negativo: " + rNeg;
     
 }
+
+//Ejercicio 6
+
+function calcularPotencias(b, e){
+    let pot = Math.pow(b, e);
+    return pot;
+}
