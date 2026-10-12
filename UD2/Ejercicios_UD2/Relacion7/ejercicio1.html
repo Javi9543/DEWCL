@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/leaflet@2.0.0-alpha.1/dist/leaflet.css"
+      integrity="sha256-P+hWJNlpL+GBSRYC7cdsDbQH91URmpDeOzLp7DbFRtE="
+      crossorigin=""
+    />
+
+    <style>
+        #map {
+            height: 500px;
+            width: 100%;
+        }
+    </style>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="map"></div>
+
+    <script type="importmap">
+    {
+        "imports": {
+            "leaflet": "https://cdn.jsdelivr.net/npm/leaflet@2.0.0-alpha.1/dist/leaflet.js"
+        },
+        "integrity": {
+            "https://cdn.jsdelivr.net/npm/leaflet@2.0.0-alpha.1/dist/leaflet.js": "sha256-gj5JhNAaMi6LCs+jVFOk8sXDe1sWSS2Zlc87m+trLiQ="
+        }
+    }
+    </script>
+
+    <script type="module">
+        import { LeafletMap, TileLayer, Marker, Popup } from 'leaflet';
+
+        const map = new LeafletMap('map').setView([51.505, -0.09], 13);
+
+        new TileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+        
+       function tomarLocalizacion(){
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(mostrarPosicion)
+            } else {
+                alert("Tu navegador no soporta la geolocalización. ");
+            }
+       }
+
+       function mostrarPosicion(posicion){
+        const latitud = posicion.coords.latitude;
+        const longitud = posicion.coords.longitude;
+
+        map.setView([latitud,longitud], 15);
+       }
+
+       tomarLocalizacion()
+    </script>
+
+
+  </body>
+</html>
