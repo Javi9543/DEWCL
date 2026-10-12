@@ -29,6 +29,7 @@ function numeroAleatoriov3(n1, n2){
     return aleatorio
 }
 
+//Ejercicio2
 function calculosAngulos(num){
     let ang = num;
     let radianes = ang * (Math.PI / 180); //Este es calculo para sacar las radianes del angulo del usuario
@@ -43,6 +44,7 @@ function calculosAngulos(num){
     return("Los calculos del angulo " + ang + " son los siguientes: " + " | Sen = " + sen + " | Coseno = " + cos + " | Tangente = " + tan);
 }
 
+//ejercicio 3 y 4
 function calculosHipotenusa(t1, t2){
     debugger;
     a = t1 * t1;
@@ -50,4 +52,19 @@ function calculosHipotenusa(t1, t2){
     c = Math.round(Math.sqrt(a + b));
 
     return "La hipotenusa de " + t1 + ", " + t2 + " es: " + c;
+}
+
+//Ejercicio 5
+function cacularRaiz2grado(a, b, c){
+    let rPos = 0;
+    let rNeg = 0;
+
+    let disc = Math.pow(b, 2) - 4 * (a*c);
+    let raiz = Math.sqrt(disc);
+
+    rPos = (-b + raiz) / (2 * a);
+    rNeg = (-b - raiz) / (2 * a);
+
+    return "Resultado positivo raiz: " + rPos + " | Resultado Negativo: " + rNeg;
+    
 }
