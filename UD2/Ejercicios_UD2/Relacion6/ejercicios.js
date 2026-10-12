@@ -29,3 +29,17 @@ function numeroAleatoriov3(n1, n2){
 
     return aleatorio
 }
+
+function calculosAngulos(num){
+    let ang = num;
+    let radianes = ang * (Math.PI / 180); //Este es calculo para sacar las radianes del angulo del usuario
+    let cos;
+    let sen; 
+    let tan;
+
+    cos = Math.cos(radianes);
+    sen = Math.sin(radianes);
+    tan = Math.tan(radianes);
+
+    return("Los calculos del angulo " + ang + " son los siguientes: " + " | Sen = " + sen + " | Coseno = " + cos + " | Tangente = " + tan);
+}
