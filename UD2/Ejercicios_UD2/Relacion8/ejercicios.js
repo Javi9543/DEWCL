@@ -39,3 +39,11 @@ const lanzamientoV2 = (arr) => {
 //Ejercicio 4
 
 const volumenEsfera = (r) => (4/3) * Math.PI * r ** 3;
+
+//Ejercicio 5
+const volumenEsferaV2 = (r) => {
+    let v = (4/3) * Math.PI * r ** 3;
+    let a = 4 * Math.PI * (r*r);
+
+    return "Volumen: " + v, "Área: " + a;
+    };
