@@ -12,11 +12,15 @@ numeroMayorV2 = (n1, n2, n3, n4, nMax) => nMax = Math.max(n1, n2, n3, n4);
 
 
 //Ejercicio2
-function lanzamiento(){
-    let numeroDado;
 
-    numeroDado = Math.random()* 6;
-    numeroDado = Math.round(numeroDado);
-    
-    return numeroDado;
-}
+    lanzamiento = () => {
+        let numeroDado = Math.random() * 6;
+        
+        while (numeroDado < 1){
+            numeroDado = Math.random() * 6;
+        }
+
+        numeroDado = Math.round(numeroDado);
+
+        return numeroDado;
+    }
