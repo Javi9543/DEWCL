@@ -34,5 +34,8 @@ const lanzamientoV2 = (arr) => {
 
         arr[num - 1]++;
     }
-    
 }
+
+//Ejercicio 4
+
+const volumenEsfera = (r) => (4/3) * Math.PI * r ** 3;
