@@ -8,19 +8,31 @@ function numeroMayor(n1, n2, n3, n4){
 }
 
 //misma funcion hecha de tipo arrow function
-numeroMayorV2 = (n1, n2, n3, n4, nMax) => nMax = Math.max(n1, n2, n3, n4);
+const numeroMayorV2 = (n1, n2, n3, n4, nMax) => nMax = Math.max(n1, n2, n3, n4);
 
 
 //Ejercicio2
 
-    lanzamiento = () => {
-        let numeroDado = Math.random() * 6;
+const lanzamiento = () => {
+    let numeroDado = Math.random() * 6;
         
-        while (numeroDado < 1){
-            numeroDado = Math.random() * 6;
-        }
-
-        numeroDado = Math.round(numeroDado);
-
-        return numeroDado;
+    while (numeroDado < 1){
+        numeroDado = Math.random() * 6;
     }
+
+    numeroDado = Math.round(numeroDado);
+
+    return numeroDado;
+}
+
+//Ejercicio 3
+const lanzamientoV2 = (arr) => {
+    let num; 
+
+    for (let i = 0; i < 6000; i++) {
+        num = lanzamiento();
+
+        arr[num - 1]++;
+    }
+    
+}
