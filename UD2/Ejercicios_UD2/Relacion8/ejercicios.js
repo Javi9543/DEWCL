@@ -47,3 +47,15 @@ const volumenEsferaV2 = (r) => {
 
     return {v, a};
     };
+
+//Ejercicio 6
+
+const potenciaRecursiva = (b, e) => {
+    if(e === 0){
+        return 1;
+    }
+
+    
+    
+    return base * potenciaRecursiva(b, e - 1);
+}
