@@ -10,3 +10,13 @@ const numeroMayor = (ar) => {
 };
 
 //Ejercicio 2
+const existeColor = (col, cUsu) => {
+    for (let i = 0; i < col.length; i++) {
+        if(col[i].toLowerCase() == cUsu.toLowerCase()){
+            return "El color: " + cUsu + " está en el array";
+        } 
+    }
+
+    return "El color: " + cUsu + " no está en el array";
+}
+
