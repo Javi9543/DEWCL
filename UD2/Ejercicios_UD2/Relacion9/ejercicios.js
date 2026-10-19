@@ -20,3 +20,9 @@ const existeColor = (col, cUsu) => {
     return "El color: " + cUsu + " no está en el array";
 }
 
+//Ejercicio 3
+const generarNums = (ar) => {
+    for (let i = 0; i < 21; i++) {
+        ar.push(Math.floor(Math.random()*21));
+    }
+}
