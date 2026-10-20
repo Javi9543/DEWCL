@@ -69,14 +69,25 @@ const diferencia = (ar1, ar2) => {
 };
 
 //Ejercicio 5:
-
+/**
+ * Funcion flecha, que busca en un array los valores, Maximo, medio y minimo que hay en el mismo y los devuelve
+ * por pantalla.
+ * 
+ * @param {*} ar Array a buscar elementos
+ * @mayor Valor máximo del array
+ * @medio Valor medio del array
+ * @minimo Valor minimo del array
+ * @returns valor, maximo, medio y minimo del array
+ * 
+ */
 const comprobarValores = (ar) =>{
   let mayor = Math.max(...ar);
   let menor = Math.min(...ar);
   let medio;
 
+  /* este for each lo que hace es que si el elemento es menor que numero maximo del array y mayor que el numero
+  minimo del array, le asigna a la varianle medio el numero medio que existe en el array. */
   ar.forEach(elemento => {
-
     if (elemento > menor && elemento < mayor){
       medio = elemento;
     }
