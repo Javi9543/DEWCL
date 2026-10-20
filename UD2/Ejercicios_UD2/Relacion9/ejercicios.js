@@ -67,3 +67,20 @@ const diferencia = (ar1, ar2) => {
   });
   return ar3;
 };
+
+//Ejercicio 5:
+
+const comprobarValores = (ar) =>{
+  let mayor = Math.max(...ar);
+  let menor = Math.min(...ar);
+  let medio;
+
+  ar.forEach(elemento => {
+
+    if (elemento > menor && elemento < mayor){
+      medio = elemento;
+    }
+  });
+
+  return [mayor, menor, medio];
+}
