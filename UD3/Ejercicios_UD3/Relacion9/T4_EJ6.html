@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Javier Muñoz Parra">
+    <script src="ejercicios.js"></script>
+    <title>T4_EJ6</title>
+</head>
+<body>
+    <div id="contenedor">
+
+    </div>
+
+    <button onclick="buscarPalabra()"> Pulsame!</button>
+
+    <script>
+        const parrafos = ["El perro ladra", "El gato duerme", "El coche se mueve"];
+
+        const cont = document.getElementById("contendor");
+        parrafos.forEach(parrafo => cont.innerText += `<p>$parrafo<p>`)
+    </script>
+</body>
+</html>

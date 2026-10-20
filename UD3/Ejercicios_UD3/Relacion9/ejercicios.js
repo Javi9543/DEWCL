@@ -95,3 +95,10 @@ const comprobarValores = (ar) =>{
 
   return [mayor, menor, medio];
 }
+
+//Ejercicio 6
+
+const buscarPalabra = () =>{ 
+  
+
+}
