@@ -124,3 +124,27 @@ const buscarPalabra = (ar) =>{
   
 
 }
+
+//Ejercicio 7
+
+const ordenarNums = (ar) => {
+  
+  //Bucle Burbuja: 
+
+    for (let i = 0; i < ar.length - 1; i++) { //recorrer cada pasada
+      for (let j = 0; j < ar.length - i - 1; j++) { //recorro cada elemento
+
+        if(ar[j] > ar[j + 1]){ //comprubo si el numero introducido es mayor que el siguiente
+                              // de la lista
+          //los numeros más pequeños iran hacia delante y 
+          //los más grandes irán hacia atras;
+          let aux = ar[j]; //guardo el numero de la izquierda
+          ar[j] = ar[j + 1]; //copio el menor a la izquerda
+          ar[j + 1] = aux; //el numero mayor lo paso a la derecha
+        }
+      }
+      
+    }
+
+    return ar;
+}
