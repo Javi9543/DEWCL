@@ -126,7 +126,12 @@ const buscarPalabra = (ar) =>{
 }
 
 //Ejercicio 7
-
+/**
+ * 
+ * @param {*} ar array de numeros del usuario
+ * @aux variable que guarda un numero temporalmente
+ * @returns @param {*} ar array de numeros ordenado
+ */
 const ordenarNums = (ar) => {
   
   //Bucle Burbuja: 
@@ -148,6 +153,15 @@ const ordenarNums = (ar) => {
 
     return ar;
 }
+
+/**
+ * Funcion que recibe una cadena de nombres y luego la convierte a cadena para
+ * posteriormente separar sus elementos por comas y posteriormente ordenarlo y mostrarlo por
+ * pantalla.
+ * 
+ * @param {*} str cadena del usuario
+ * @returns cadena del usuario ordenada
+ */
 
 const separarNombres = (str) => {
   debugger; 

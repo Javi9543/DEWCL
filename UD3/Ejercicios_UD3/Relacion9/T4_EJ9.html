@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Javier Muñoz Parra" />
+    <script src="ejercicios.js"></script>
+    <title>T4_EJ9</title>
+  </head>
+  <body>
+    <h1>Analizar Texto</h1>
+
+    <script>
+      //Recibo el texto del usuario
+
+
+      let numeroPalabras = 0;
+      let palabra1 = "";
+      let palabraFinal = "";
+      let invertirCadena = "";
+      let ordenarAlfabeto = "";
+      let ordenarAlReces = "";
+
+      let cadena = prompt("Introduce una frase: ");
+
+      if (cadena) {
+        let frase = cadena.split(" "); //separio por espacios generando un array
+
+        numeroPalabras = frase.length;
+        palabra1 = frase[0];
+        palabraFinal = frase[frase.length - 1];
+
+        invertirCadena = [...frase].reverse("");
+        ordenarAlfabeto = [...frase].sort.join(" ");
+        ordenarAlReces = [...frase].reverse.join(" ");
+      }
+
+      let nVentana = window.open("", "", "width=600,height=700");
+      nVentana.document.write(`<h1>Info de la cadena</h1>`);
+      nVentana.document.write(`<p>Numero palabras: ${numeroPalabras}<p/>`);
+      nVentana.document.write(`<p>Palabra1: ${palabra1}</p>`);
+      nVentana.document.write(`<p>Palabra final: ${palabraFinal}</p>`);
+      nVentana.document.write(`<p>Orden revertido: ${invertirCadena}</p>`);
+      nVentana.document.write(`<p>Orden Alfabetico: ${ordenarAlfabeto}</p>`);
+      nVentana.document.write(`<p>Orden Inverso: ${ordenarAlReces}</p>`);
+    </script>
+  </body>
+</html>
