@@ -9,7 +9,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Iniciar Chrome para localhost",
-            "url": "http://127.0.0.1:5500/UD2/Ejercicios_UD2/Relacion1/T2_ej10.html",
+            "url": "http://127.0.0.1:5500/UD3/Ejercicios_UD3/Relacion9/T4_EJ6.html",
         }
     ]
 }
