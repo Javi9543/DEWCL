@@ -148,3 +148,12 @@ const ordenarNums = (ar) => {
 
     return ar;
 }
+
+const separarNombres = (str) => {
+  debugger; 
+  let nomb = str.split(",").map(p => p.trim());
+
+  nomb.sort();
+
+  return nomb;
+}
