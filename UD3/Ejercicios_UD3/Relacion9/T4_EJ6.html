@@ -12,13 +12,14 @@
 
     </div>
 
-    <button onclick="buscarPalabra()"> Pulsame!</button>
+    <button onclick="buscarPalabra(parrafos)"> Pulsame!</button>
 
     <script>
         const parrafos = ["El perro ladra", "El gato duerme", "El coche se mueve"];
 
-        const cont = document.getElementById("contendor");
-        parrafos.forEach(parrafo => cont.innerText += `<p>$parrafo<p>`)
+        const cont = document.getElementById("contenedor");
+
+        parrafos.forEach(parrafo => cont.innerHTML += `<p>${parrafo}</p>`);
     </script>
 </body>
 </html>

@@ -97,8 +97,30 @@ const comprobarValores = (ar) =>{
 }
 
 //Ejercicio 6
+/**
+ * 
+ * @param {*} ar Contiene los parrafos en los que se buscará la palabra.
+ * @frase Variable que guarda la frase del usuario a buscar
+ * @encontrado Variable booleana, que si encuentra la frase a buscar cambia a true y
+ * devolvera la sentencia de código del else que es la satisfactoria.
+ */
+const buscarPalabra = (ar) =>{ 
+  let frase = prompt("Introduzca la palabra a buscar: ");
+  let encontrado = false;
 
-const buscarPalabra = () =>{ 
+  for (let i = 0; i < ar.length; i++) {
+    if (ar[i].toLowerCase().includes(frase.toLowerCase())) {
+      encontrado = true;
+      break;
+    }
+    
+  }
+
+  if(!encontrado){
+    alert("La palabra ${frase}, no existe en el array.")
+  } else {
+    alert("La palabra ${frase}, existe en el array.")
+  }
   
 
 }
