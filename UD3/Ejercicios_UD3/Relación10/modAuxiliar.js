@@ -21,3 +21,21 @@ const filterNumbersGreaterThan = (numeros, numero) => {
     return arFiltrado;
 }
 
+
+//Ejercicio 2
+/**
+ * Funcion que devuelve una cadena nueva traducida a hacker speak
+ * @param {*} cadena 
+ * @var cadNueva devuelve la cadena nueva modificada 
+ * @returns {string} Devuelve una cadena nueva.
+ */
+const toHackerSpeak = (cadena) => {
+    cadNueva = "";
+    cadNueva += cadena.replaceAll("a", "4");
+    cadNueva = cadNueva.replaceAll("e", "3");
+    cadNueva = cadNueva.replaceAll("i", "1");
+    cadNueva = cadNueva.replaceAll("o", "0");
+    cadNueva = cadNueva.replaceAll("s", "5");
+
+    return cadNueva;
+}
