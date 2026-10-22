@@ -57,14 +57,18 @@ const getFileExtension = (file) => {
 
 
 //Ejercicio 4
-
+/**
+ * 
+ * @param {[][]} aR2D array bidimensional
+ * @returns {[]} array unidimensional
+ */
 const flatArray = (aR2D) => {
 
     let ar1D = []
 
     for (let i = 0; i < aR2D.length; i++) {
-        for (let j = 0; j < aRD2.length; j++) {
-            ar1D.push(ar2D[j]);            
+        for (let j = 0; j < aR2D[i].length; j++) {
+            ar1D.push(aR2D[i][j]);            
         }
         
     }
