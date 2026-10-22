@@ -42,6 +42,11 @@ const toHackerSpeak = (cadena) => {
 }
 
 //Ejercicio 3
+/**
+ * 
+ * @param {*} file 
+ * @returns {String} extension del archivo
+ */
 
 const getFileExtension = (file) => {
     debugger;
@@ -50,3 +55,19 @@ const getFileExtension = (file) => {
     return extension[extension.length - 1];
 }
 
+
+//Ejercicio 4
+
+const flatArray = (aR2D) => {
+
+    let ar1D = []
+
+    for (let i = 0; i < aR2D.length; i++) {
+        for (let j = 0; j < aRD2.length; j++) {
+            ar1D.push(ar2D[j]);            
+        }
+        
+    }
+
+    return ar1D;
+}
