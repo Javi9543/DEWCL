@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Javier Muñoz Parra">
+    <script src="modAuxiliar.js"></script>
+    <title>R10_Ej1</title>
+</head>
+<body>
+    <script>
+        let nums;
+        let arNumeros = [];
+        let filtro;
+
+        while (nums != 0){
+            nums = parseInt(prompt("Introduzca numeros al array (0 para salir): ")),
+            arNumeros.push(nums);
+        }
+
+        filtro = parseInt(prompt("Introduzca los numeros a filtrar del array: "))
+        document.write(`<p>Array original = [${arNumeros}]</p>`)
+        document.write(`<p>Array filtrado = ${filterNumbersGreaterThan(arNumeros, filtro)}</p>`);
+    </script>
+</body>
+</html>
