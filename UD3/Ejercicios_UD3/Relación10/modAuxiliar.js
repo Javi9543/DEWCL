@@ -29,6 +29,7 @@ const filterNumbersGreaterThan = (numeros, numero) => {
  * @var cadNueva devuelve la cadena nueva modificada 
  * @returns {string} Devuelve una cadena nueva.
  */
+
 const toHackerSpeak = (cadena) => {
     cadNueva = "";
     cadNueva += cadena.replaceAll("a", "4");
@@ -39,3 +40,13 @@ const toHackerSpeak = (cadena) => {
 
     return cadNueva;
 }
+
+//Ejercicio 3
+
+const getFileExtension = (file) => {
+    debugger;
+    let extension = file.split(".");
+
+    return extension[extension.length - 1];
+}
+
