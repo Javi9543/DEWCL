@@ -75,7 +75,11 @@ const flatArray = (aR2D) => {
 
     return ar1D;
 }
-
+/**
+ * Programa que quita los elementos duplicados de un array.
+ * @param {*} arN [] array de numeros duplicados
+ * @returns [] array sin  dobles con uso de map
+ */
 const removeDuplicates = (arN) => {
     const sinDobles = new Set(arN);
 
