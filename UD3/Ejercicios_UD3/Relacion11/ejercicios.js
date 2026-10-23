@@ -42,7 +42,7 @@ const edadMediaAlumnos = (ar) => {
 //Ejercicio 4
 
 const alumnoAleatorio = (ar) => {
-    let aleatorio = Math.round(Math.random()*ar.length);
+    let aleatorio = Math.floor(Math.random()*ar.length);
 
     let al = ar[aleatorio].split(",");
 
