@@ -22,6 +22,29 @@ const buscarNotas = (idAl, tri, ar) => {
         nota = Math.round(media / 3);
     }
     
-    
     return nota;
+}
+
+//Ejercicio 3
+const edadMediaAlumnos = (ar) => {
+    let total = 0;
+    let edadTotal;
+    for (let i = 0; i < ar.length; i++) {
+        total += Number(ar[1]);
+    }
+
+    edadTotal = total / ar.length;
+
+    return edadTotal;
+}
+
+
+//Ejercicio 4
+
+const alumnoAleatorio = (ar) => {
+    let aleatorio = Math.round(Math.random()*ar.length);
+
+    let al = ar[aleatorio].split(",");
+
+    return al[0];
 }
