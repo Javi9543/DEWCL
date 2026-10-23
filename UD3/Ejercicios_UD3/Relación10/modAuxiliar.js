@@ -75,3 +75,9 @@ const flatArray = (aR2D) => {
 
     return ar1D;
 }
+
+const removeDuplicates = (arN) => {
+    const sinDobles = new Set(arN);
+
+    return sinDobles;
+}
