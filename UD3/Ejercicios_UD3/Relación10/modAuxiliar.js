@@ -4,8 +4,8 @@
  * Funcion que filtra los numeros mayores al filtro introducido por el usuario, el cual
  * devuelve los numeros del array padre que son menores al filtro.
  * 
- * @param {*} numeros array de numeros a filtrar.
- * @param {*} numero filter, numero a partir del cual se van a filtrar los numeros del array.
+ * @param {[]} numeros array de numeros a filtrar.
+ * @param {number} numero filter, numero a partir del cual se van a filtrar los numeros del array.
  * 
  * @returns {arFiltrad[]} array con los numeros menores al filtro introducido.
  */
@@ -80,7 +80,7 @@ const flatArray = (aR2D) => {
 
 /**
  * Programa que quita los elementos duplicados de un array.
- * @param {*} arN [] array de numeros duplicados
+ * @param {Array} arN [] array de numeros duplicados
  * @returns [] array sin  dobles con uso de map
  */
 
@@ -91,7 +91,13 @@ const removeDuplicates = (arN) => {
 }
 
 //Ejercicio 6 
-
+/**
+ * 
+ * @param {string} cadena 
+ * @param {string} letra 
+ * @returns {Number} numero de veces que aparece "letra" en "cadena"
+ *  
+ */
 const countLetter = (cadena, letra) => {
     let cadNueva = cadena.toLowerCase().split('');
     let cont = 0;
@@ -103,4 +109,17 @@ const countLetter = (cadena, letra) => {
 
     return cont;
 
+}
+/**
+ * 
+ * @param {string} str 
+ * @param {Array} words 
+ * @returns {String} cadena con palabras eliminadas y el array de palabras a eliminar
+ */
+const removeWords = (str, words) => {
+    for (let i = 0; i < words.length; i++) {
+        str = str.replaceAll(words[i], "")
+    }
+
+    return str + " [" + words + "]";
 }
