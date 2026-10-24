@@ -66,7 +66,18 @@ const paresImpares = (ar) => {
 }
 
 //Ejercicio 6
-
+const calcularSueldo = (ar) => {
+    let nombre;
+    let ventas;
+    let sueldo;
+    for (i in ar) {
+        nombre = ar[i][0];
+        ventas = ar[i][1];
+        sueldoB = ar[i][2];
+        sueldo = 200 + (ventas * 0.09);       
+        document.write(`El vendedor ${nombre}, con un total de ${ventas} ventas, tendrá un sueldo de: ${sueldo} euros. <br>`)
+    }
+}
 //Ejercicio 7
 
 //Ejercicio 8
