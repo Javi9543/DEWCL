@@ -48,3 +48,31 @@ const alumnoAleatorio = (ar) => {
 
     return al[0];
 }
+
+//Ejercicio 5
+
+const paresImpares = (ar) => {
+    let arOrdenado = [];
+
+    for (let i = 0; i < ar.length; i++) {
+        if (ar[i] % 2 == 0) {
+            arOrdenado.unshift(ar[i]);
+        } else {
+            arOrdenado.push(ar[i]);
+        }
+    }
+
+    return arOrdenado;
+}
+
+//Ejercicio 6
+
+//Ejercicio 7
+
+//Ejercicio 8
+
+//Ejercicio 9
+
+//Ejercicio 10
+
+//Ejercicio 11
