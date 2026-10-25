@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="ejercicos.js"></script>
+    <title>R12_EJ3</title>
+  </head>
+  <body>
+    <script>
+      let mapaTesoro = [
+        [34, 21, 32, 41, 25],
+        [14, 42, 43, 14, 31],
+        [54, 45, 52, 42, 23],
+        [33, 15, 51, 31, 35],
+        [21, 52, 33, 13, 23],
+      ];
+
+      let encontrado = false;
+      let fila = 1;
+      let columna = 1;
+      while (!encontrado) {
+
+        let tesoro = mapaTesoro[fila - 1][columna - 1]; //empiezo en la casilla con valor 34
+        let fila1 = Math.floor(tesoro / 10); //me quedo con la fila (el resto y la division es 10 debido al sistema decimal)
+        let columna1 = tesoro % 10; //me quedo con la columna
+
+        if (fila === fila1 && columna === columna1) {
+          //si fila 1 y fila, columna 1 y columna coinciden
+          //tenemos el tesoro
+
+          encontrado = true;
+          document.write(         
+            `El tesoro está en las coordenadas ${fila} ${columna}, que su resultado es: ${tesoro} `,
+          );
+        } else {
+          //Si no coinciden la fila y la columna, coge una nueva fila y columna a la que ir
+          fila = fila1;
+          columna = columna1;
+        }
+      }
+    </script>
+  </body>
+</html>
