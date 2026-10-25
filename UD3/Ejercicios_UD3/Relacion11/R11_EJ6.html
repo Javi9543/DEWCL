@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="ejercicios.js"></script>
+    <title>R11_EJ6</title>
+  </head>
+  <body>
+    <script>
+      let vendedores = [];
+      let anyadirVendedores = true;
+
+      while (anyadirVendedores) {
+        let nombre = prompt("Nombre del vendedor: ");
+        let ventas = parseFloat(prompt("Sueldo en ventas de la semana: "));
+        vendedores.push([nombre, ventas]);
+
+        let cond = prompt("Añadir vendedores (Si|No)");
+        cond = cond.toLowerCase();
+
+        if ((cond == "no")) {
+          anyadirVendedores = false;
+        }
+      }
+
+      calcularSueldo(vendedores);
+    </script>
+  </body>
+</html>
