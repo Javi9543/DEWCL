@@ -17,7 +17,7 @@ function buscarTesoro(ar) {
   let fila = 1;
   let columna = 1;
   while (!encontrado) {
-    let tesoro = mapaTesoro[fila - 1][columna - 1]; //empiezo en la casilla con valor 34
+    let tesoro = ar[fila - 1][columna - 1]; //empiezo en la casilla con valor 34
     let fila1 = Math.floor(tesoro / 10); //me quedo con la fila (el resto y la division es 10 debido al sistema decimal)
     let columna1 = tesoro % 10; //me quedo con la columna
 
@@ -39,8 +39,9 @@ function buscarTesoroV2(ar) {
   let encontrado = false;
   let fila = 1;
   let columna = 1;
+  
   while (!encontrado) {
-    let tesoro = mapaTesoro[fila - 1][columna - 1]; //empiezo en la casilla con valor 34
+    let tesoro = ar[fila - 1][columna - 1]; //empiezo en la casilla con valor 34
     let fila1 = Math.floor(tesoro / 10); //me quedo con la fila (el resto y la division es 10 debido al sistema decimal)
     let columna1 = tesoro % 10; //me quedo con la columna
 

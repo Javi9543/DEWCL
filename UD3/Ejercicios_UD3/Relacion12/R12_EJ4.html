@@ -1,14 +1,31 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="ejercicos.js"></script>
     <title>R12_EJ4</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        
+      let mapaV2 = [];
+    
+      for (let i = 0; i < 5; i++) {
+        mapaV2[i] = [];
+        for (let j = 0; j < 5; j++) {
+          let fila1 = Math.floor(Math.random() * 5) + 1; //Genero una fila aleatoria;
+          let columna1 = Math.floor(Math.random() * 5) + 1; //Genero una columna aleatoria
+          mapaV2[i][j] = fila1 * 10 + columna1;
+        }
+      }
+
+       let fila = Math.floor(Math.random() * 5) + 1 //Genero una fila aleatoria;
+       let columna = Math.floor(Math.random() * 5) + 1 //Genero una columna aleatoria
+       let tesoroV2 = fila * 10 + columna; //genero cual será el tesoro
+
+      mapaV2[fila - 1][columna - 1] = tesoroV2; //le meto los numeros aleatorios
+      console.log(mapaV2)
+      document.write(buscarTesoroV2(mapaV2));
     </script>
-</body>
+  </body>
 </html>
