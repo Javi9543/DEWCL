@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="ejercicios.js"></script>
+    <title>R11_EJ2</title>
+  </head>
+  <body>
+    <script>
+      let clase = ["Javi, 19, 5, 7, 10", "Daniel, 20, 10,6,5", "Raul, 24, 7, 10, 8"];
+      let idAlumno = parseInt(prompt("Introduzca el ID del alumno (empezando desde 1): "));
+      let tri = parseInt(prompt("Introduzca el trimestre para saber la nota (No introduzca nada para saber la nota media): "));
+
+      if (tri > 0) {
+        console.log(
+          "La nota del trimestre 1 del alumno seleccionado, es: " +
+            buscarNotas(idAlumno, tri, clase),
+        );
+      } else {
+        console.log(
+          "La nota media del alumno con seleccionado, es: " +
+            buscarNotas(idAlumno, tri, clase),
+        );
+      }
+    </script>
+  </body>
+</html>

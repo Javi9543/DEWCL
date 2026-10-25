@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Javier Muñoz Parra">
+    <script src="ejercicios.js"></script>
+    <title>T4_EJ5</title>
+</head>
+<body>
+    <script>
+        let NumsAleatorios = [];
+
+        for (let i = 0; i < 20; i++) {
+            NumsAleatorios.push(Math.round(Math.random(100-0)*100));
+        }
+    
+        console.log(NumsAleatorios);
+
+        document.write(`<p> Valor maximo, minimo y medio: ${comprobarValores(NumsAleatorios)} </p>`)
+        document.write(`<p> Para ver el array abrir consola.</p>`)
+    </script>
+</body>
+</html>
