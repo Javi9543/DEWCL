@@ -122,7 +122,6 @@ const lanzamientoDados = (ar) => {
 //Ejercicio 9
 
 const lanzamientoDadosV2 = (ar) => {
-    
   for (let i = 0; i < 6; i++) {
     ar[i] = [];
     for (let j = 0; j < 6; j++) {
@@ -141,5 +140,29 @@ const lanzamientoDadosV2 = (ar) => {
 };
 
 //Ejercicio 10
+const asientosAvion = (ar, nombre, asiento) => {
 
+  if (asiento == "first") {
+    for (let i = 0; i < 5; i++) {
+      if (ar[i] == "") {
+        ar[i] = nombre;
+        let nventana = window.open("", "Embarque", "width=400,height=300");
+        nventana.document.write("Usted tiene el asiento nº " + (i + 1));
+        break;
+      }
+    }
+    
+ } else {
+    for (let i = 5; i < 10; i++) {
+      if (ar[i] == "") {
+        ar[i] = nombre;
+        let nventana = window.open("", "Embarque", "width=400,height=300");
+        nventana.document.write("Usted tiene el asiento nº " + (i + 1));
+        break;
+      }
+    }
+
+  }
+  return ar;
+};
 //Ejercicio 11
