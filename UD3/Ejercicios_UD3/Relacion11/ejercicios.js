@@ -79,7 +79,31 @@ const calcularSueldo = (ar) => {
     }
 }
 //Ejercicio 7
+const operacionesConAr = (ar) => {
+    //valores del array separado por espacios 
+    //(hago esto al principio para que se vean los valores originales del array)
 
+    //A) con console.log()
+    console.log(ar.join(" "));
+
+    //B) con document.write
+    document.write(`${ar.join(" ")}`);
+
+
+    //Poner todos los elementos del array a 0.
+    for (let i = 0; i < ar.length; i++) {
+        ar[i] = 0;
+    }
+
+
+    //añadir 1 a cada posicion del array.
+    for (let i = 0; i < ar.length; i++) {
+        ar[i] += 1;
+    }
+
+    return ar;
+    
+}
 //Ejercicio 8
 
 //Ejercicio 9
