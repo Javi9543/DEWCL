@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Javier Muñoz Parra" />
+    <script src="ejercicios.js"></script>
+    <title>R11_EJ10</title>
+  </head>
+  <body>
+    <div id="contenido"></div>
+    
+    <script>
+      let hoja = [];
+      let nVendedor;
+      let nProducto;
+      let valor;
+      let continuar = "si";
+      let contenido = "";
+      let totalGeneral;
+
+      //genero el array de 5x4
+      for (let i = 0; i < 5; i++) {
+        hoja[i] = [];
+        for (let j = 0; j < 4; j++) {
+          hoja[i][j] = 0;
+        }
+      }
+
+      //pido y guardo los datos de cada vendedor
+      while (continuar == "si") {
+        nVendedor = parseInt(prompt("Introduzca su número de vendedor: "));
+        nProducto = parseInt(prompt("Itroduzca su numero de producto: "));
+        valor = parseInt(prompt("Introduzca el valor vendido"));
+
+        //guardo el producto
+        hoja[nProducto - 1][nVendedor - 1] += valor;
+
+        //pregunto si se quieren añadir más vendedores
+        continuar = prompt("¿Desea añadir otro vendedor? (si|no): ");
+
+        if (continuar.toLowerCase() == "no") {
+          break;
+        }
+      }
+        //imprimo el contenido
+        debugger
+
+        //Hago la cabecera
+        contenido = "<table border='1'>";
+        contenido += "<tr>";
+        contenido += "<td></td>"
+        for (let i = 0; i < 4; i++) {
+            contenido += "<td>" + " Vendedor: " + (i + 1) + "</td>";
+            
+        }
+        contenido += "<td>TOTAL</td>";
+        contenido += "</tr>"
+
+        //Imprimo los datos de cada vendedor
+        for (let i = 0; i < 5; i++) {
+            contenido+= "<tr>";
+            contenido+= "<td> Producto: " + (i + 1) + "</td>";     
+            for (let j = 0; j < 4; j++) {
+                
+                contenido+= "<td>" + hoja[i][j] + "</td>";     
+            }
+            contenido+= "</tr>";
+        }
+
+        //Calculo el total de cada vendedor.
+        contenido += "<tr>";
+        contenido += "<td>TOTAL</td>";
+        totalGeneral = 0;
+        for (let j= 0; j < 4; j++) {
+            totVendedor = 0;
+            for (let i = 0; i < 5;i++) {
+                totVendedor += hoja[i][j]; //sumo los datos por vendedor
+            }
+            contenido += "<td>" + totVendedor + "</td>";
+            totalGeneral += totVendedor; //sumo los totales de todos los vendedores
+            
+        }
+
+        contenido += "<td>" + totalGeneral + "</td>";
+        contenido += "</tr>";
+        contenido += "</table>";
+
+        document.getElementById("contenido").innerHTML = contenido;
+    </script>
+
+  </body>
+</html>
