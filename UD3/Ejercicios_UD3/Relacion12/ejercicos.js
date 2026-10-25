@@ -7,7 +7,7 @@ const empiezanPorJ = (ar) => {
 }
 
 //Ejercicio 3
-function busarTesoro(ar){
+function buscarTesoro(ar){
       let encontrado = false;
       let fila = 1;
       let columna = 1;
