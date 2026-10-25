@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Javier Muñoz Parra">
+    <script src="ejercicos.js"></script>
+    <title>R12_EJ1</title>
+</head>
+<body>
+    <script>
+        let arNumeros =[1,2,3,4,5,6,7,8,9,10];
+        let arCadenas = ['hola', 'mundo', 'como estan', 'todos hoy', 'today is sunny'];
+        let arNuevo = [];
+        let arNuevo2 = [];
+        console.log(arNumeros)
+        console.log(arCadenas);
+
+        let numLargo = arNumeros.reduce((max, actual) => (actual > max ? actual : max));    
+        console.log("Numero más largo: " + numLargo);
+
+        let stringLargo = arCadenas.reduce((max, act) => act.length > max.length ? act : max);
+        console.log("Cadena más larga: " + stringLargo); 
+
+        let numPares = arNumeros.filter((n) => n % 2 == 0);
+        console.log("Numeros Pares: " + numPares);
+
+        let numImpares = arNumeros.filter((n) => n % 2 != 0);
+        console.log("Numeros Impares: " + numImpares);
+
+        let conIS = arCadenas.filter(cad => cad.includes('is'));
+        console.log("Palabra con IS: " + conIS);
+
+        let numDiv3 = arNumeros.filter((n) => n % 3 == 0);
+        console.log("Numeros divisibles entre 3: " + numDiv3);
+
+        arNuevo = arNumeros.map((n, i) => [n, arCadenas[i]]);
+        arNuevo2 = arNumeros.concat(arCadenas);
+        console.log("Arrays unidos: ")
+        console.log(arNuevo);
+        console.log(arNuevo2);
+        
+        let arOrdenado = arNuevo2.sort().sort((a,b) => a-b);
+        console.log("Array conjunto ordenado: ")
+        console.log(arOrdenado);
+
+        let primerElementoCad = arCadenas.shift();
+        console.log("Primer elemento de una cadena eliminado: " + primerElementoCad)
+        console.log(arCadenas);
+
+        let anyadirPrimerElemento = arCadenas.unshift("Hola Mundo");
+        console.log("Elemento añadido a la cadena: ");
+        console.log(arCadenas);
+
+        let cambiarElemento = arCadenas.splice(0, 1, "Hola Javascript");
+        console.log("Elemento Cambiado: " + cambiarElemento);
+        console.log(arCadenas);
+    </script>
+</body>
+</html>
