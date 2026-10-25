@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="ejercicos.js"></script>
+    <title>R6_EJ6</title>
+</head>
+<body>
+    <script>
+        let frase = "ifmanwas meanttos tayonthe groundgo dwouldha vegivenu sroots"
+        let limpiarFrase = frase.replaceAll(' ', '');
+        col = 8;
+
+        let arFrase = [];
+
+        for (let i = 0; i < limpiarFrase.length; i+= col) {
+            let fila = limpiarFrase.slice(i, i + col).split('')
+            arFrase.push(fila);
+        }
+
+        console.log(arFrase);
+        console.log(sqareCode(arFrase))
+        
+    </script>
+</body>
+</html>

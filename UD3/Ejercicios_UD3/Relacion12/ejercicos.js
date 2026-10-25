@@ -35,7 +35,6 @@ function buscarTesoro(ar) {
   }
 }
 
-
 //Ejercicio 4
 function buscarTesoroV2(ar) {
   let encontrado = false;
@@ -61,36 +60,51 @@ function buscarTesoroV2(ar) {
   }
 }
 
-function saddlePoint(ar){
-    for (let i = 0; i < nums.length; i++) {
-            let max = Math.max(...nums[i]); //Numero máximo de una fila
-            for (let j = 0; j < nums[i].length; j++) {
-                if(max == nums[i][j]){ //compruebo cual es el numero maximo de la fila
-                    let col = [];
+function saddlePoint(ar) {
+  for (let i = 0; i < nums.length; i++) {
+    let max = Math.max(...nums[i]); //Numero máximo de una fila
+    for (let j = 0; j < nums[i].length; j++) {
+      if (max == nums[i][j]) {
+        //compruebo cual es el numero maximo de la fila
+        let col = [];
 
-                    for (let k = 0; k < nums.length; k++) {
-                        col.push(nums[k][j]); //Numeros de una columna                        
-                    }
-
-                    let min = Math.min(...col); //cojo el valor minimo de la columna
-                    let saddle;
-
-                    if (nums[i][j] === min) {
-                      saddle = [i + 1, j + 1]; //guardo el saddle
-                      saddle2.push(saddle); //lo guargo en un array por si hay más de uno
-                    } 
-                }
-            }
+        for (let k = 0; k < nums.length; k++) {
+          col.push(nums[k][j]); //Numeros de una columna
         }
-        
-        console.log(nums); //muestro el array original
-        
-        //compruebo si esta vacio para mandar un mensaje de error y si no los hay muestro el/los saddle/s
-        if(saddle2.length === 0){
-            console.log("No hay saddle points.")
-        } else {
-            console.log("Saddle Point: ")
-            console.log(saddle2);
+
+        let min = Math.min(...col); //cojo el valor minimo de la columna
+        let saddle;
+
+        if (nums[i][j] === min) {
+          saddle = [i + 1, j + 1]; //guardo el saddle
+          saddle2.push(saddle); //lo guargo en un array por si hay más de uno
         }
-      
+      }
+    }
+  }
+
+  console.log(nums); //muestro el array original
+
+  //compruebo si esta vacio para mandar un mensaje de error y si no los hay muestro el/los saddle/s
+  if (saddle2.length === 0) {
+    console.log("No hay saddle points.");
+  } else {
+    console.log("Saddle Point: ");
+    console.log(saddle2);
+  }
+}
+
+function sqareCode(arFrase){
+    let mensajecifrado = "";
+    let filas = arFrase.length; //numero de filas
+    let col = arFrase[0].length; //numero de columnas
+    
+    for (let i = 0; i < col; i++) {
+        for (let j = 0; j < filas; j++) {
+            if(arFrase[j][i] !== undefined) //compruebo las filas antes de leerlas para codificar el mensaje
+            mensajecifrado+=arFrase[j][i];
+        }
+    }
+
+    return mensajecifrado;
 }
