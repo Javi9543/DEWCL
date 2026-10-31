@@ -17,14 +17,22 @@ let alertas = [
   "You're so sweet that I'd think you're a sweet potato -- and I LOOOOVE POTATOES",
 ];
 
-const showAlert = (nombre) => alert(alertas[Math.floor(Math.random() * alertas.length)] + `, ${nombre}!`);
+const showAlert = (nombre) =>
+  alert(alertas[Math.floor(Math.random() * alertas.length)] + `, ${nombre}!`);
 
 /* Ejercicio 2 */
-const saludo = (nombre, edad) => `Hello, I am ${nombre} and I am ${edad} years old`;
+const saludo = (nombre, edad) =>
+  `Hello, I am ${nombre} and I am ${edad} years old`;
 
 /* Ejercicio 3 */
 const sumaArray = (numeros) => numeros.reduce((i, num) => i + num);
 
 /* Ejercicio 4*/
 let eye = "eye";
-const fire = () => `bulls-${eye}`
+const fire = () => `bulls-${eye}`;
+
+/* Ejercicio 5 */
+const fibonacci = (n) => {
+  if (n < 3) return 1;
+  return fibonacci(n - 1) + fibonacci(n - 2);
+};
