@@ -20,9 +20,11 @@ let alertas = [
 const showAlert = (nombre) => alert(alertas[Math.floor(Math.random() * alertas.length)] + `, ${nombre}!`);
 
 /* Ejercicio 2 */
-
 const saludo = (nombre, edad) => `Hello, I am ${nombre} and I am ${edad} years old`;
 
 /* Ejercicio 3 */
-
 const sumaArray = (numeros) => numeros.reduce((i, num) => i + num);
+
+/* Ejercicio 4*/
+let eye = "eye";
+const fire = () => `bulls-${eye}`
