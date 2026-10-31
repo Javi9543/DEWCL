@@ -22,3 +22,7 @@ const showAlert = (nombre) => alert(alertas[Math.floor(Math.random() * alertas.l
 /* Ejercicio 2 */
 
 const saludo = (nombre, edad) => `Hello, I am ${nombre} and I am ${edad} years old`;
+
+/* Ejercicio 3 */
+
+const sumaArray = (numeros) => numeros.reduce((i, num) => i + num);
