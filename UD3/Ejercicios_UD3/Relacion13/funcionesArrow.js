@@ -20,3 +20,5 @@ let alertas = [
 const showAlert = (nombre) => alert(alertas[Math.floor(Math.random() * alertas.length)] + `, ${nombre}!`);
 
 /* Ejercicio 2 */
+
+const saludo = (nombre, edad) => `Hello, I am ${nombre} and I am ${edad} years old`;
