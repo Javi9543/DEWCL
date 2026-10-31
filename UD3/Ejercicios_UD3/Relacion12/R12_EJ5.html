@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="ejercicos.js"></script>
+    <title>R12_EJ5</title>
+  </head>
+  <body>
+    <script>
+        let nums = [];
+        let saddle2 = []
+        //genero los numeros
+        for (let i = 0; i < 5; i++) {
+            nums[i] = [];
+        for (let j = 0; j < 5; j++) {
+            nums[i][j] = Math.floor(Math.random() * 5);
+        }
+      }
+        //llamo al saddlePoint
+        console.log(saddlePoint(nums))
+    
+    </script> 
+  </body>
+</html>
