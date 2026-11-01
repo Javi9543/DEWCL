@@ -11,12 +11,12 @@ export default class Casas {
     this.num = num;
   }
 
-  setNumero(num){
-    this.num = num;
+  setCalle(calle){
+    this.calle = calle;
   }
 
-  setNumero(num){
-    this.num = num;
+  setCodPostal(cod){
+    this.codPostal = cod;
   }
 
   imprimeCalle(){
