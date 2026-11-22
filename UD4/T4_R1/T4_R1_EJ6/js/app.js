@@ -27,7 +27,7 @@ const creaTabla = (colores) => {
         let filas = document.createElement("tr");
         let col = document.createElement("td");
 
-        col.textContent = color.cod;
+        col.textContent = color.nomb;
 
         col.addEventListener("mouseover", () => {
             col.style.backgroundColor = color.cod
