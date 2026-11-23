@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Javier Muñoz Parra">
+    <title>Ej7</title>
+</head>
+<body>
+    <div id="contenido-formulario">
+        <form>
+            <label for="nombre">Nombre: </label>
+            <input type="text" name="nombre" id="nombre" placeholder="Introduzca su nombre"> <br><br>
+
+            <label for="email">Correo Electronico: </label>
+            <input type="email" name="email" id="email" placeholder="Introduzca su email"> <br><br>
+
+            <label for="comentario">Comentarios: </label><br>
+            <textarea id="comentario" rows="10" cols="50" placeholder="introduzca su comentario"></textarea>
+
+            <input type="submit" value="Enviar" id="enviar">
+            <input type="reset" name="reiniciar" id="reiniciar">
+        </form>
+    </div>
+
+    <div id="ayuda"></div>
+    <script type="module" src="./js/app.js"></script>
+</body>
+</html>
